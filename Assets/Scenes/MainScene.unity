@@ -711,16 +711,32 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 3721128803729834970, guid: 0b04c903e01c07c42b6a9aea2d222798, type: 3}
-      propertyPath: SheepSpawnInterval.x
+      propertyPath: MaxSheepHeight
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3721128803729834970, guid: 0b04c903e01c07c42b6a9aea2d222798, type: 3}
+      propertyPath: SheepSpawnScale.x
+      value: 0.8
+      objectReference: {fileID: 0}
+    - target: {fileID: 3721128803729834970, guid: 0b04c903e01c07c42b6a9aea2d222798, type: 3}
+      propertyPath: SheepSpawnScale.y
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3721128803729834970, guid: 0b04c903e01c07c42b6a9aea2d222798, type: 3}
+      propertyPath: SheepSpawnInterval.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 3721128803729834970, guid: 0b04c903e01c07c42b6a9aea2d222798, type: 3}
       propertyPath: SheepSpawnInterval.y
-      value: 5
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 3721128803729834970, guid: 0b04c903e01c07c42b6a9aea2d222798, type: 3}
       propertyPath: SheepSpawnVelocity.x
       value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 3721128803729834970, guid: 0b04c903e01c07c42b6a9aea2d222798, type: 3}
+      propertyPath: SheepSpawnVelocity.y
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 3926000248609907189, guid: 0b04c903e01c07c42b6a9aea2d222798, type: 3}
       propertyPath: m_Name
