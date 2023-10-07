@@ -210,11 +210,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bf55b5ab41a489b48933b350b24ccde9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Tiredness: 0
   SheepPrefab: {fileID: 3577377807054872890, guid: ae6e4ee53b85e934b9dec1876577a4db, type: 3}
   SpawnPoint: {fileID: 7055586291057957794}
-  SheepSpawnInterval: {x: 13, y: 16}
-  SheepSpawnVelocity: {x: 2, y: 5}
+  SheepSpawnInterval: {x: 1, y: 5}
+  SheepSpawnScale: {x: 1, y: 1}
+  SheepSpawnVelocity: {x: 4, y: 5}
+  BlackSheepProbability: 0.1
   MaxSheepHeight: 2.4
   FloorOffset: 2.4
 --- !u!1 &5483764321172272640

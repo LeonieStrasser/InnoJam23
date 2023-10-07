@@ -859,6 +859,14 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 3721128803729834970, guid: 0b04c903e01c07c42b6a9aea2d222798, type: 3}
+      propertyPath: SheepSpawnScale.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3721128803729834970, guid: 0b04c903e01c07c42b6a9aea2d222798, type: 3}
+      propertyPath: SheepSpawnScale.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3721128803729834970, guid: 0b04c903e01c07c42b6a9aea2d222798, type: 3}
       propertyPath: SheepSpawnInterval.x
       value: 1
       objectReference: {fileID: 0}
