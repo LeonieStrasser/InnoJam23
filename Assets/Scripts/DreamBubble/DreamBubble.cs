@@ -25,6 +25,8 @@ public class DreamBubble : MonoBehaviour
     [SerializeField] [MinMaxSlider(0f, 15f)]
     private Vector2 SheepSpawnVelocity;
 
+    [SerializeField] private float BlackSheepProbability = 0.1f;
+
     [SerializeField] private float MaxSheepHeight = 2.4f;
     [SerializeField] private float FloorOffset = 2.4f;
 
@@ -64,12 +66,17 @@ public class DreamBubble : MonoBehaviour
     private void SpawnSheep()
     {
         GameObject newSheep = Instantiate(SheepPrefab, SpawnPoint.position, Quaternion.Euler(new Vector3(0, 0, Random.Range(0f, 360f))), gameObject.transform);
+
+        Sheep newSheepComponent = newSheep.GetComponent<Sheep>();
+        AllSheep.Add(newSheepComponent);
+        
+        if(ShouldSpawnBlackSheep())
+            newSheepComponent.MakeBlack();
+        
         newSheep.transform.localScale = Vector3.one * Random.Range(SheepSpawnScale.x, SheepSpawnScale.y);
         Rigidbody2D newSheepRb = newSheep.GetComponent<Rigidbody2D>();
         
         newSheepRb.AddForce(Vector2.right * Random.Range(SheepSpawnVelocity.x, SheepSpawnVelocity.y), ForceMode2D.Impulse);
-        
-        AllSheep.Add(newSheep.GetComponent<Sheep>());
     }
 
     public void DestroySheep(Sheep _sheep)
@@ -111,5 +118,12 @@ public class DreamBubble : MonoBehaviour
         
         if(Tiredness >= 1f)
             OnMaxTiredness?.Invoke();
+    }
+
+    private bool ShouldSpawnBlackSheep()
+    {
+        int random = Random.Range(1, 11);
+
+        return BlackSheepProbability * 10f <= random;
     }
 }
