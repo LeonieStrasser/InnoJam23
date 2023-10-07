@@ -131,6 +131,90 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 5379096437878271035, guid: d6bbcb411e0827046ada4df8f95e1b2b, type: 3}
+      propertyPath: neonPsyc.myPitch
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5379096437878271035, guid: d6bbcb411e0827046ada4df8f95e1b2b, type: 3}
+      propertyPath: debugRoundProcess
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5379096437878271035, guid: d6bbcb411e0827046ada4df8f95e1b2b, type: 3}
+      propertyPath: volumeRangeOverLivetimeNeon.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5379096437878271035, guid: d6bbcb411e0827046ada4df8f95e1b2b, type: 3}
+      propertyPath: volumeRangeOverLivetimeTick.x
+      value: 0.11029412
+      objectReference: {fileID: 0}
+    - target: {fileID: 5379096437878271035, guid: d6bbcb411e0827046ada4df8f95e1b2b, type: 3}
+      propertyPath: volumeRangeOverLivetimeTick.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5379096437878271035, guid: d6bbcb411e0827046ada4df8f95e1b2b, type: 3}
+      propertyPath: neonSoundCurve.m_Curve.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 5379096437878271035, guid: d6bbcb411e0827046ada4df8f95e1b2b, type: 3}
+      propertyPath: neonSoundCurve.m_Curve.Array.data[0].time
+      value: 0.3117485
+      objectReference: {fileID: 0}
+    - target: {fileID: 5379096437878271035, guid: d6bbcb411e0827046ada4df8f95e1b2b, type: 3}
+      propertyPath: neonSoundCurve.m_Curve.Array.data[1].time
+      value: 0.6792014
+      objectReference: {fileID: 0}
+    - target: {fileID: 5379096437878271035, guid: d6bbcb411e0827046ada4df8f95e1b2b, type: 3}
+      propertyPath: neonSoundCurve.m_Curve.Array.data[2].time
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5379096437878271035, guid: d6bbcb411e0827046ada4df8f95e1b2b, type: 3}
+      propertyPath: neonSoundCurve.m_Curve.Array.data[0].value
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5379096437878271035, guid: d6bbcb411e0827046ada4df8f95e1b2b, type: 3}
+      propertyPath: neonSoundCurve.m_Curve.Array.data[1].value
+      value: 0.16512227
+      objectReference: {fileID: 0}
+    - target: {fileID: 5379096437878271035, guid: d6bbcb411e0827046ada4df8f95e1b2b, type: 3}
+      propertyPath: neonSoundCurve.m_Curve.Array.data[2].value
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5379096437878271035, guid: d6bbcb411e0827046ada4df8f95e1b2b, type: 3}
+      propertyPath: neonSoundCurve.m_Curve.Array.data[0].inSlope
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5379096437878271035, guid: d6bbcb411e0827046ada4df8f95e1b2b, type: 3}
+      propertyPath: neonSoundCurve.m_Curve.Array.data[1].inSlope
+      value: 0.87389636
+      objectReference: {fileID: 0}
+    - target: {fileID: 5379096437878271035, guid: d6bbcb411e0827046ada4df8f95e1b2b, type: 3}
+      propertyPath: neonSoundCurve.m_Curve.Array.data[2].inSlope
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5379096437878271035, guid: d6bbcb411e0827046ada4df8f95e1b2b, type: 3}
+      propertyPath: neonSoundCurve.m_Curve.Array.data[0].outSlope
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5379096437878271035, guid: d6bbcb411e0827046ada4df8f95e1b2b, type: 3}
+      propertyPath: neonSoundCurve.m_Curve.Array.data[1].inWeight
+      value: 0.21308252
+      objectReference: {fileID: 0}
+    - target: {fileID: 5379096437878271035, guid: d6bbcb411e0827046ada4df8f95e1b2b, type: 3}
+      propertyPath: neonSoundCurve.m_Curve.Array.data[1].outSlope
+      value: 0.87389636
+      objectReference: {fileID: 0}
+    - target: {fileID: 5379096437878271035, guid: d6bbcb411e0827046ada4df8f95e1b2b, type: 3}
+      propertyPath: neonSoundCurve.m_Curve.Array.data[2].outSlope
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5379096437878271035, guid: d6bbcb411e0827046ada4df8f95e1b2b, type: 3}
+      propertyPath: neonSoundCurve.m_Curve.Array.data[0].outWeight
+      value: 0.14441825
+      objectReference: {fileID: 0}
+    - target: {fileID: 5379096437878271035, guid: d6bbcb411e0827046ada4df8f95e1b2b, type: 3}
+      propertyPath: neonSoundCurve.m_Curve.Array.data[1].outWeight
+      value: 0.33333334
+      objectReference: {fileID: 0}
     - target: {fileID: 6516029358432151306, guid: d6bbcb411e0827046ada4df8f95e1b2b, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
