@@ -1,0 +1,157 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &7273193554491756215
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 6516029358432151306}
+  - component: {fileID: 1131126377843996613}
+  - component: {fileID: 3250761619856445926}
+  - component: {fileID: 5379096437878271035}
+  - component: {fileID: 3289415037254284991}
+  m_Layer: 0
+  m_Name: AUDIOMANAGER
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &6516029358432151306
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7273193554491756215}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1131126377843996613
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7273193554491756215}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5e981a0736484134ba399fda7cb15fc3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sounds:
+  - name: OfficeAmbience
+    myClip: {fileID: 8300000, guid: 946a4afa5ce1f504d8b66ba099802468, type: 3}
+    myVolume: 1
+    MyLoop: 1
+    playFromStart: 1
+    randomizePitch: 0
+    myPitch: 1
+    minMaxPitch: {x: 0, y: 3}
+    mySource: {fileID: 0}
+  - name: Sheep
+    myClip: {fileID: 8300000, guid: c6175231a06e707478a64df6b8bb9e76, type: 3}
+    myVolume: 0.466
+    MyLoop: 0
+    playFromStart: 0
+    randomizePitch: 1
+    myPitch: 1
+    minMaxPitch: {x: 0.86549705, y: 2.0409358}
+    mySource: {fileID: 0}
+  - name: Error
+    myClip: {fileID: 8300000, guid: 29af37e3397cec446b4fc21f09b51a85, type: 3}
+    myVolume: 0.533
+    MyLoop: 0
+    playFromStart: 0
+    randomizePitch: 1
+    myPitch: 1
+    minMaxPitch: {x: 0.95, y: 1.05}
+    mySource: {fileID: 0}
+  - name: Typesound
+    myClip: {fileID: 8300000, guid: 091a970c915832c48b344d7e53789d76, type: 3}
+    myVolume: 0.18
+    MyLoop: 1
+    playFromStart: 0
+    randomizePitch: 0
+    myPitch: 0.88
+    minMaxPitch: {x: 0.95, y: 1.05}
+    mySource: {fileID: 0}
+  - name: StartSound
+    myClip: {fileID: 8300000, guid: 34dea762ff7b04f45b4dd5f6cd11e946, type: 3}
+    myVolume: 0.27
+    MyLoop: 0
+    playFromStart: 1
+    randomizePitch: 0
+    myPitch: 1
+    minMaxPitch: {x: 0.95, y: 1.05}
+    mySource: {fileID: 0}
+  - name: RightInput
+    myClip: {fileID: 8300000, guid: 24238b1f638329e43b5d70bd87fbc193, type: 3}
+    myVolume: 0.523
+    MyLoop: 0
+    playFromStart: 0
+    randomizePitch: 0
+    myPitch: 1
+    minMaxPitch: {x: 0.95, y: 1.05}
+    mySource: {fileID: 0}
+  myTickNoise: {fileID: 0}
+  myTypeSound: {fileID: 0}
+--- !u!114 &3250761619856445926
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7273193554491756215}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 36c26cb7de36410488f0171f00908b7b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  soundToPlay: Sheep
+--- !u!114 &5379096437878271035
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7273193554491756215}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 143f34bd6a9126745aec065396d8fd1a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  tickingSound:
+    name: Tick
+    myClip: {fileID: 8300000, guid: 080d020a9090746449cf1bfab78f359f, type: 3}
+    myVolume: 1
+    MyLoop: 1
+    playFromStart: 1
+    randomizePitch: 0
+    myPitch: 1
+    minMaxPitch: {x: 0, y: 0}
+    mySource: {fileID: 0}
+  volumeRangeOverLivetime: {x: 0.035976313, y: 0.99999994}
+  debugRoundProcess: 0
+--- !u!114 &3289415037254284991
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7273193554491756215}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5782d4973143edd40b11efab408b87be, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  soundDelay: 2
+  typeSoundName: Typesound
