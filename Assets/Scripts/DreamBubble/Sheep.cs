@@ -3,15 +3,22 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using DG.Tweening;
+using Unity.VisualScripting;
+using UnityEditor;
 
 public class Sheep : MonoBehaviour
 {
     [SerializeField] private SpriteRenderer SheepSprite;
     [SerializeField] private Sprite SheepBlack;
+    
+    [SerializeField] private float ClickHoldDuration;
+    
     [SerializeField] private float BlackSheepScaleUpFactor;
     [SerializeField] private float BlackSheepScaleUpDuration;
     [SerializeField] private float BlackSheepBigDuration;
+    
     [SerializeField] private GameObject sheepPuffVFX;
+    [SerializeField] private GameObject sheepBlackPuffVFX;
 
     private DreamBubble Bubble;
 
@@ -21,10 +28,28 @@ public class Sheep : MonoBehaviour
 
     private bool ImmuneToMouse;
 
+    private bool ClickHoldActive;
+
+    private float CurrentClickHoldTimer;
+
     private void Start()
     {
         Bubble = transform.parent.GetComponent<DreamBubble>();
         SpriteStartScale = SheepSprite.transform.localScale;
+    }
+
+    private void Update()
+    {
+        if (!ClickHoldActive)
+            return;
+
+        CurrentClickHoldTimer += Time.deltaTime;
+
+        if (CurrentClickHoldTimer >= ClickHoldDuration)
+        {
+            OnClickedLongEnough();
+            ResetClickHold();
+        }
     }
 
     private void OnCollisionEnter2D(Collision2D other)
@@ -46,6 +71,8 @@ public class Sheep : MonoBehaviour
         if (ImmuneToMouse)
             return;
         
+        ResetClickHold();
+        
         SheepSprite.transform.DOScale(SpriteStartScale, 0.2f);
     }
 
@@ -53,20 +80,16 @@ public class Sheep : MonoBehaviour
     {
         if (ImmuneToMouse)
             return;
-        
-        AudioManager.instance.PlayStackable("Sheep");
 
-        if (IsBlack)
-        {
-            StartCoroutine(BlackSheepClick());
-            return;
-        }
-        
-        Instantiate(sheepPuffVFX, transform.position, Quaternion.identity, null);
-        Remove();
+        ClickHoldActive = true;
     }
 
-    private IEnumerator BlackSheepClick()
+    private void OnMouseUp()
+    {
+        ResetClickHold();
+    }
+
+    private IEnumerator BlackSheepScaleUp()
     {
         ImmuneToMouse = true;
 
@@ -77,9 +100,15 @@ public class Sheep : MonoBehaviour
 
         yield return new WaitForSeconds(BlackSheepScaleUpDuration + BlackSheepBigDuration);
         
-        Instantiate(sheepPuffVFX, transform.position, Quaternion.identity, null);
+        Instantiate(sheepBlackPuffVFX, transform.position, Quaternion.identity, null);
         
         Remove();
+    }
+
+    private void ResetClickHold()
+    {
+        ClickHoldActive = false;
+        CurrentClickHoldTimer = 0;
     }
 
     public void MakeBlack()
@@ -87,6 +116,21 @@ public class Sheep : MonoBehaviour
         SheepSprite.sprite = SheepBlack;
 
         IsBlack = true;
+    }
+
+    private void OnClickedLongEnough()
+    {
+        AudioManager.instance.PlayStackable("Sheep");
+        AudioManager.instance.PlayStackable("SheepWind");
+
+        if (IsBlack)
+        {
+            StartCoroutine(BlackSheepScaleUp());
+            return;
+        }
+        
+        Instantiate(sheepPuffVFX, transform.position, Quaternion.identity, null);
+        Remove();
     }
 
     private void Remove()
