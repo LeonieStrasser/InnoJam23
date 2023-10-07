@@ -7,7 +7,7 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: M_ClockFace
+  m_Name: M_ClockBG
   m_Shader: {fileID: -6465566751694194690, guid: 19d8484c82ceaba4e8dda82ecc6a02d8, type: 3}
   m_Parent: {fileID: 0}
   m_ModifiedSerializedProperties: 0
@@ -31,7 +31,7 @@ Material:
     m_Floats:
     - _BUILTIN_QueueControl: 0
     - _BUILTIN_QueueOffset: 0
-    - _FillAmount: 0
+    - _FillAmount: 1
     m_Colors: []
   m_BuildTextureStacks: []
 --- !u!114 &3059308297768068712
