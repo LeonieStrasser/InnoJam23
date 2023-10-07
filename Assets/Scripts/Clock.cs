@@ -53,7 +53,7 @@ public class Clock : MonoBehaviour
     {
         float fillAmount = elapsedTimeThisRound / secondsUntilDeathline;
 
-        ClockRenderer.material.SetFloat("_FillAmount", 1 - fillAmount);
+        ClockRenderer.material.SetFloat("_FillAmount", fillAmount);
 
         AudioManager.instance.myTickNoise.UpdateTickingVolume(fillAmount);
     }
