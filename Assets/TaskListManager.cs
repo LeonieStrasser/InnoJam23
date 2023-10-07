@@ -30,6 +30,7 @@ public class TaskListManager : MonoBehaviour
         instance = this;
 
         TaskInputReceiver.Instance.OnPressedSubmitWithText += SubmittedTask;
+        DreamBubble.Instance.OnTirednessChanged += SetTextSoftness;
     }
 
     private void OnDestroy()
@@ -37,8 +38,13 @@ public class TaskListManager : MonoBehaviour
         if (instance == this)
             instance = null;
 
+        SetTextSoftness(0f);
+
         if (TaskInputReceiver.Instance)
             TaskInputReceiver.Instance.OnPressedSubmitWithText -= SubmittedTask;
+
+        if (DreamBubble.Instance)
+            DreamBubble.Instance.OnTirednessChanged -= SetTextSoftness;
     }
 
     public void InitialiseList(int taskListSize, int minTaskLength, int maxTaskLength)
@@ -96,15 +102,8 @@ public class TaskListManager : MonoBehaviour
         taskListVisual.text = taskText.TrimStart();
     }
 
-    [ContextMenu("Max Softness")]
-    public void MaxSoft()
+    private void SetTextSoftness(float normalisedDegree)
     {
-        taskListVisual.material.SetFloat(TMPro.ShaderUtilities.ID_FaceDilate, 1f);
-    }
-
-    [ContextMenu("Min Softness")]
-    public void MinSoft()
-    {
-        taskListVisual.material.SetFloat(TMPro.ShaderUtilities.ID_FaceDilate, 0f);
+        taskListVisual.fontSharedMaterial.SetFloat(TMPro.ShaderUtilities.ID_OutlineSoftness, 0f);
     }
 }
