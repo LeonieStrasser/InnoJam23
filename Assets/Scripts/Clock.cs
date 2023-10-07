@@ -37,6 +37,16 @@ public class Clock : MonoBehaviour
         TimerRunning = true;
     }
 
+    public void Continue()
+    {
+        TimerRunning = (elapsedTimeThisRound < secondsUntilDeathline);
+    }
+
+    public void Pause()
+    {
+        TimerRunning = false;
+    }
+
     private void TimerFinished()
     {
         Debug.Log("Timer is Finished");
@@ -53,7 +63,7 @@ public class Clock : MonoBehaviour
     {
         float fillAmount = elapsedTimeThisRound / secondsUntilDeathline;
 
-        ClockRenderer.material.SetFloat("_FillAmount", 1 - fillAmount);
+        ClockRenderer.material.SetFloat("_FillAmount", fillAmount);
 
         AudioManager.instance.myTickNoise.UpdateTickingVolume(fillAmount);
     }

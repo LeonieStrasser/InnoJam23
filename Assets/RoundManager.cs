@@ -24,6 +24,39 @@ public class RoundManager : MonoBehaviour
 
     private Clock TimerClock;
 
+    public float NormalisedPassedTime
+    {
+        get
+        {
+            if (TimerClock == null)
+                TimerClock = FindObjectOfType<Clock>();
+
+            return TimerClock.NormalisedPassedTime;
+        }
+    }
+
+    private static RoundManager instance;
+    public static RoundManager Instance
+    {
+        get
+        {
+            if (instance == null)
+                instance = FindObjectOfType<RoundManager>();
+            return instance;
+        }
+    }
+
+    private void Awake()
+    {
+        instance = this;
+    }
+
+    private void OnDestroy()
+    {
+        if (instance == this)
+            instance = null;
+    }
+
     public void StartFirstRound()
     {
         roundCounter = playerRoundAtStart;
@@ -45,8 +78,26 @@ public class RoundManager : MonoBehaviour
                                                 minTaskLength + additionalMinTaskLengthPerRound * round,
                                                 maxTaskLength + additionalMaxTaskLengthPerRound * round);
 
-        TimerClock.StartTimer(secondsUntilDeathline+additionalSecondsUntilDeathline * round);
+        TimerClock.StartTimer(secondsUntilDeathline + additionalSecondsUntilDeathline * round);
 
         GameManager.Instance.StartRound();
+    }
+
+    [ContextMenu("Continue")]
+    public void Continue()
+    {
+        TimerClock.Continue();
+        TaskInputReceiver.Instance.SetInputBlocked(false);
+
+        Time.timeScale = 1;
+    }
+
+    [ContextMenu("Pause")]
+    public void Pause()
+    {
+        TimerClock.Pause();
+        TaskInputReceiver.Instance.SetInputBlocked(true);
+
+        Time.timeScale = 0;
     }
 }

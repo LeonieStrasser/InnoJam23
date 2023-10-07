@@ -28,6 +28,8 @@ public class TaskInputReceiver : MonoBehaviour
     float textCursorTime = 0;
     [SerializeField, Min(0.1f)] float textCursorIntervalSecond = 0.5f;
 
+    private bool taskInputBlocked;
+
     private void Awake()
     {
         instance = this;
@@ -44,6 +46,8 @@ public class TaskInputReceiver : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (taskInputBlocked) return;
+
         if (Input.anyKeyDown)
         {
             if (Input.GetKeyDown(KeyCode.Return))
@@ -107,5 +111,10 @@ public class TaskInputReceiver : MonoBehaviour
             UpdateVisual();
             textCursorTime -= textCursorIntervalSecond;
         }
+    }
+
+    public void SetInputBlocked(bool isBlocked)
+    {
+        taskInputBlocked = isBlocked;
     }
 }
