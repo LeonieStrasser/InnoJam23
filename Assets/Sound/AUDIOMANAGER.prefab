@@ -159,7 +159,51 @@ MonoBehaviour:
     myPitch: 1
     minMaxPitch: {x: 0, y: 0}
     mySource: {fileID: 0}
-  volumeRangeOverLivetime: {x: 0.035976313, y: 0.99999994}
+  volumeRangeOverLivetimeTick: {x: 0.11029412, y: 1}
+  neonPsyc:
+    name: NeonPsyc
+    myClip: {fileID: 8300000, guid: b5109f6438a04244fa2b362b7d22c11f, type: 3}
+    myVolume: 1
+    MyLoop: 1
+    playFromStart: 1
+    randomizePitch: 0
+    myPitch: 1
+    minMaxPitch: {x: 0, y: 0}
+    mySource: {fileID: 0}
+  volumeRangeOverLivetimeNeon: {x: 0, y: 1}
+  neonSoundCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0.3117485
+      value: 0
+      inSlope: -0
+      outSlope: -0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0.14441825
+    - serializedVersion: 3
+      time: 0.6792014
+      value: 0.16512227
+      inSlope: 0.87389636
+      outSlope: 0.87389636
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.21308252
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 1
+      inSlope: 2
+      outSlope: 2
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
   debugRoundProcess: 0
 --- !u!114 &3289415037254284991
 MonoBehaviour:
