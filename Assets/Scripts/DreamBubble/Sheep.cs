@@ -36,6 +36,8 @@ public class Sheep : MonoBehaviour
 
     private void OnMouseDown()
     {
+        AudioManager.instance.PlayStackable("Sheep");
+        
         SheepSprite.transform.DOKill();
         Bubble.UpdateTiredness();
         Bubble.DestroySheep(this);

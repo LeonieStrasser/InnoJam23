@@ -43,8 +43,10 @@ public class Clock : MonoBehaviour
 
     private void UpdateClockVisuals()
     {
-        float fillAmount = 1 - CurrentTimer / CurrentDuration;
+        float fillAmount = CurrentTimer / CurrentDuration;
         
-        ClockRenderer.material.SetFloat("_FillAmount", fillAmount);
+        ClockRenderer.material.SetFloat("_FillAmount", 1- fillAmount);
+        
+        AudioManager.instance.myTickNoise.UpdateTickingVolume(fillAmount);
     }
 }
