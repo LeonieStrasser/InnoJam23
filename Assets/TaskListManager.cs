@@ -104,6 +104,6 @@ public class TaskListManager : MonoBehaviour
 
     private void SetTextSoftness(float normalisedDegree)
     {
-        taskListVisual.fontSharedMaterial.SetFloat(TMPro.ShaderUtilities.ID_OutlineSoftness, 0f);
+        taskListVisual.fontSharedMaterial.SetFloat(TMPro.ShaderUtilities.ID_OutlineSoftness, normalisedDegree);
     }
 }
