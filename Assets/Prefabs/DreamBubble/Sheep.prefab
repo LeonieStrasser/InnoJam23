@@ -173,6 +173,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   SheepSprite: {fileID: 5183046737951217109}
+  sheepPuffVFX: {fileID: 4758066341444628334, guid: 90ca6682dd8e4d946bdb71d10dbcb867, type: 3}
 --- !u!1 &3710630532920449200
 GameObject:
   m_ObjectHideFlags: 0

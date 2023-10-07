@@ -7,6 +7,7 @@ using DG.Tweening;
 public class Sheep : MonoBehaviour
 {
     [SerializeField] private SpriteRenderer SheepSprite;
+    [SerializeField] private GameObject sheepPuffVFX;
 
     private DreamBubble Bubble;
 
@@ -37,6 +38,7 @@ public class Sheep : MonoBehaviour
     private void OnMouseDown()
     {
         AudioManager.instance.PlayStackable("Sheep");
+        Instantiate(sheepPuffVFX, this.transform.position, Quaternion.identity, null);
         
         SheepSprite.transform.DOKill();
         Bubble.UpdateTiredness();
