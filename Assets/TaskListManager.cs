@@ -41,7 +41,7 @@ public class TaskListManager : MonoBehaviour
             TaskInputReceiver.Instance.OnPressedSubmitWithText -= SubmittedTask;
     }
 
-    public void InitialiseList(int taskListSize,int minTaskLength, int maxTaskLength)
+    public void InitialiseList(int taskListSize, int minTaskLength, int maxTaskLength)
     {
         taskList = listGenerator.GenerateList(taskListSize, minTaskLength, maxTaskLength);
         UpdateTaskListVisual();
@@ -94,5 +94,17 @@ public class TaskListManager : MonoBehaviour
         }
 
         taskListVisual.text = taskText.TrimStart();
+    }
+
+    [ContextMenu("Max Softness")]
+    public void MaxSoft()
+    {
+        taskListVisual.material.SetFloat(TMPro.ShaderUtilities.ID_FaceDilate, 1f);
+    }
+
+    [ContextMenu("Min Softness")]
+    public void MinSoft()
+    {
+        taskListVisual.material.SetFloat(TMPro.ShaderUtilities.ID_FaceDilate, 0f);
     }
 }

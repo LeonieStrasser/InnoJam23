@@ -35,6 +35,22 @@ public class DreamBubble : MonoBehaviour
     private float SheepSpawnTimer;
     private float CurrentSpawnInterval;
 
+    private static DreamBubble instance;
+    public static DreamBubble Instance
+    {
+        get
+        {
+            if (instance == null)
+                instance = FindObjectOfType<DreamBubble>();
+            return instance;
+        }
+    }
+
+    private void Awake()
+    {
+        instance = this;
+    }
+
     private void Start()
     {
         SetNewSpawnInterval(false);
