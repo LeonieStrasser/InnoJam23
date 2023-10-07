@@ -14,6 +14,8 @@ public class Clock : MonoBehaviour
 
     private bool TimerRunning = false;
 
+    public float NormalisedPassedTime => elapsedTimeThisRound / secondsUntilDeathline;
+
     void Update()
     {
         if (!TimerRunning)
