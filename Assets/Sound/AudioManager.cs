@@ -12,11 +12,11 @@ public class AudioManager : MonoBehaviour
     public static AudioManager instance;
     public MysteriousTickingNoise myTickNoise;
     public TypeSoundGenerator myTypeSound;
+    public TextEnterSoundGenerator myTextEnter;
 
     // Start is called before the first frame update
     void Awake()
     {
-
         // Wenn schon ein Audiomanager Existiert, mach ihn kaputt
         if (instance == null)
             instance = this;
@@ -28,6 +28,11 @@ public class AudioManager : MonoBehaviour
 
         DontDestroyOnLoad(gameObject);
 
+
+
+        myTickNoise = FindObjectOfType<MysteriousTickingNoise>();
+        myTypeSound = FindObjectOfType<TypeSoundGenerator>();
+        myTextEnter = FindObjectOfType<TextEnterSoundGenerator>();
         foreach (var item in sounds)
         {
             item.mySource = gameObject.AddComponent<AudioSource>();
@@ -35,19 +40,16 @@ public class AudioManager : MonoBehaviour
             item.mySource.volume = item.myVolume;
             item.mySource.pitch = item.myPitch;
             item.mySource.loop = item.MyLoop;
-
-
         }
 
-        myTickNoise = FindObjectOfType<MysteriousTickingNoise>();
-        myTypeSound = FindObjectOfType<TypeSoundGenerator>();
+
     }
 
     private void Start()
     {
         foreach (var item in sounds)
         {
-            if(item.playFromStart)
+            if (item.playFromStart)
             {
                 Play(item.name);
             }

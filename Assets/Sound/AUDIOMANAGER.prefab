@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 3250761619856445926}
   - component: {fileID: 5379096437878271035}
   - component: {fileID: 3289415037254284991}
+  - component: {fileID: 5432047158833226505}
   m_Layer: 0
   m_Name: AUDIOMANAGER
   m_TagString: Untagged
@@ -102,8 +103,27 @@ MonoBehaviour:
     myPitch: 1
     minMaxPitch: {x: 0.95, y: 1.05}
     mySource: {fileID: 0}
+  - name: FalseInput
+    myClip: {fileID: 8300000, guid: 92fda70dc8b23664b82161c503e555cd, type: 3}
+    myVolume: 0.821
+    MyLoop: 0
+    playFromStart: 0
+    randomizePitch: 1
+    myPitch: 1
+    minMaxPitch: {x: 0.95, y: 1.05}
+    mySource: {fileID: 0}
+  - name: EnterInput
+    myClip: {fileID: 8300000, guid: 683944e4e9df4c34784e496f93401e34, type: 3}
+    myVolume: 0.552
+    MyLoop: 0
+    playFromStart: 0
+    randomizePitch: 1
+    myPitch: 1
+    minMaxPitch: {x: 0.72704375, y: 0.8270438}
+    mySource: {fileID: 0}
   myTickNoise: {fileID: 0}
   myTypeSound: {fileID: 0}
+  myTextEnter: {fileID: 0}
 --- !u!114 &3250761619856445926
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -155,3 +175,16 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   soundDelay: 2
   typeSoundName: Typesound
+--- !u!114 &5432047158833226505
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7273193554491756215}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6c4d2304622a2354ebec112f33ba8573, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  debugCorrectWord: 0
