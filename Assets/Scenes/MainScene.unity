@@ -1034,11 +1034,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8772593620723082176, guid: 851a0d52d6d29aa41a4025cf503a0023, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -4.06
+      value: -4
       objectReference: {fileID: 0}
     - target: {fileID: 8772593620723082176, guid: 851a0d52d6d29aa41a4025cf503a0023, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.84
+      value: -2
       objectReference: {fileID: 0}
     - target: {fileID: 8772593620723082176, guid: 851a0d52d6d29aa41a4025cf503a0023, type: 3}
       propertyPath: m_LocalPosition.z
@@ -1077,6 +1077,77 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 851a0d52d6d29aa41a4025cf503a0023, type: 3}
+--- !u!1001 &6777124670703285221
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 1433414039916159171, guid: 0dea538048bb6db429bb680bab106442, type: 3}
+      propertyPath: m_Name
+      value: Coffee_Collision
+      objectReference: {fileID: 0}
+    - target: {fileID: 1638912494328501811, guid: 0dea538048bb6db429bb680bab106442, type: 3}
+      propertyPath: m_Name
+      value: Coffee_Visuals
+      objectReference: {fileID: 0}
+    - target: {fileID: 1803310733788052560, guid: 0dea538048bb6db429bb680bab106442, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -1.8
+      objectReference: {fileID: 0}
+    - target: {fileID: 1803310733788052560, guid: 0dea538048bb6db429bb680bab106442, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -4
+      objectReference: {fileID: 0}
+    - target: {fileID: 1803310733788052560, guid: 0dea538048bb6db429bb680bab106442, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1803310733788052560, guid: 0dea538048bb6db429bb680bab106442, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1803310733788052560, guid: 0dea538048bb6db429bb680bab106442, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1803310733788052560, guid: 0dea538048bb6db429bb680bab106442, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1803310733788052560, guid: 0dea538048bb6db429bb680bab106442, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1803310733788052560, guid: 0dea538048bb6db429bb680bab106442, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1803310733788052560, guid: 0dea538048bb6db429bb680bab106442, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1803310733788052560, guid: 0dea538048bb6db429bb680bab106442, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3753313116206349386, guid: 0dea538048bb6db429bb680bab106442, type: 3}
+      propertyPath: m_Name
+      value: CoffeeMug
+      objectReference: {fileID: 0}
+    - target: {fileID: 8664641533261773675, guid: 0dea538048bb6db429bb680bab106442, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 10913, guid: 0000000000000000f000000000000000, type: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects:
+    - {fileID: 5085980634202203013, guid: 0dea538048bb6db429bb680bab106442, type: 3}
+    - {fileID: 2665245222452412367, guid: 0dea538048bb6db429bb680bab106442, type: 3}
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 0dea538048bb6db429bb680bab106442, type: 3}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
@@ -1090,3 +1161,4 @@ SceneRoots:
   - {fileID: 4659802506125237312}
   - {fileID: 2093113284}
   - {fileID: 1249721275}
+  - {fileID: 6777124670703285221}
