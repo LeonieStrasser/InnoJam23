@@ -24,6 +24,17 @@ public class RoundManager : MonoBehaviour
 
     private Clock TimerClock;
 
+    public float NormalisedPassedTime
+    {
+        get
+        {
+            if (TimerClock == null)
+                TimerClock = FindObjectOfType<Clock>();
+
+            return TimerClock.NormalisedPassedTime;
+        }
+    }
+
     private static RoundManager instance;
     public static RoundManager Instance
     {
