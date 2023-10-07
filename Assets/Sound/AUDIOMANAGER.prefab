@@ -121,6 +121,15 @@ MonoBehaviour:
     myPitch: 1
     minMaxPitch: {x: 0.72704375, y: 0.8270438}
     mySource: {fileID: 0}
+  - name: SheepWind
+    myClip: {fileID: 8300000, guid: 7f5b6b7d0e2e81244aabd98502b2f90c, type: 3}
+    myVolume: 0.603
+    MyLoop: 0
+    playFromStart: 0
+    randomizePitch: 1
+    myPitch: 1
+    minMaxPitch: {x: 0.7, y: 1.2}
+    mySource: {fileID: 0}
   myTickNoise: {fileID: 0}
   myTypeSound: {fileID: 0}
   myTextEnter: {fileID: 0}
