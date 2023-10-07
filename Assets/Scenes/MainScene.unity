@@ -134,6 +134,8 @@ GameObject:
   - component: {fileID: 1370816682}
   - component: {fileID: 1370816681}
   - component: {fileID: 1370816683}
+  - component: {fileID: 1370816684}
+  - component: {fileID: 1370816685}
   m_Layer: 0
   m_Name: GAME MANAGER
   m_TagString: Untagged
@@ -181,6 +183,34 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   providedInputVisual: {fileID: 1929949466}
+--- !u!114 &1370816684
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1370816680}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b20c0f45448a4ac498b0b25bb2404fef, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  taskListVisual: {fileID: 1818074091}
+  taskListSize: 10
+  listGenerator: {fileID: 1370816685}
+--- !u!114 &1370816685
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1370816680}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 98631ac6b3923fd40a7f6e4251935f46, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  workTaskData: {fileID: 4900000, guid: 4d7deb2efdf8425468c49f70c4f1bd32, type: 3}
 --- !u!1 &1786073672
 GameObject:
   m_ObjectHideFlags: 0
@@ -376,7 +406,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
   m_AnchoredPosition: {x: 5, y: -5}
-  m_SizeDelta: {x: 400, y: 500}
+  m_SizeDelta: {x: 500, y: 1070}
   m_Pivot: {x: 0, y: 1}
 --- !u!114 &1818074091
 MonoBehaviour:
@@ -429,12 +459,12 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 72
+  m_fontSize: 40
   m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 1
   m_fontSizeMin: 10
-  m_fontSizeMax: 72
+  m_fontSizeMax: 40
   m_fontStyle: 0
   m_HorizontalAlignment: 1
   m_VerticalAlignment: 256

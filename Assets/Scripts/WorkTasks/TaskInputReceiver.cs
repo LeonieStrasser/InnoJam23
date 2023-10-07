@@ -4,9 +4,10 @@ using UnityEngine;
 
 public class TaskInputReceiver : MonoBehaviour
 {
-    public event System.Action<char> OnPressedKey;
-    public event System.Action OnRemovedLastKey;
-    public event System.Action<string> OnPressedSubmit;
+    public UnityEngine.Events.UnityEvent OnPressedKey;
+    public UnityEngine.Events.UnityEvent OnRemovedLastKey;
+    public UnityEngine.Events.UnityEvent OnPressedSubmit;
+    public event System.Action<string> OnPressedSubmitWithText;
 
     [SerializeField] TMPro.TMP_Text providedInputVisual;
 
@@ -55,7 +56,8 @@ public class TaskInputReceiver : MonoBehaviour
     {
         Debug.Log("Player typed " + playerTypedKeys);
 
-        OnPressedSubmit?.Invoke(playerTypedKeys);
+        OnPressedSubmit?.Invoke();
+        OnPressedSubmitWithText?.Invoke(playerTypedKeys);
 
         playerTypedKeys = "";
         UpdateVisual();
@@ -65,8 +67,8 @@ public class TaskInputReceiver : MonoBehaviour
     {
         playerTypedKeys += addedKey;
 
+        OnPressedKey?.Invoke();
         UpdateVisual();
-        OnPressedKey?.Invoke(addedKey);
     }
 
     private void RemoveLastKey()
@@ -76,8 +78,8 @@ public class TaskInputReceiver : MonoBehaviour
 
         playerTypedKeys = playerTypedKeys.Substring(0, playerTypedKeys.Length - 1);
 
-        UpdateVisual();
         OnRemovedLastKey?.Invoke();
+        UpdateVisual();
     }
 
     private void UpdateVisual()
