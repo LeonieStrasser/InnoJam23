@@ -10,6 +10,8 @@ public class AudioManager : MonoBehaviour
     public Sound[] sounds;
 
     public static AudioManager instance;
+    public MysteriousTickingNoise myTickNoise;
+    public TypeSoundGenerator myTypeSound;
 
     // Start is called before the first frame update
     void Awake()
@@ -36,6 +38,9 @@ public class AudioManager : MonoBehaviour
 
 
         }
+
+        myTickNoise = FindObjectOfType<MysteriousTickingNoise>();
+        myTypeSound = FindObjectOfType<TypeSoundGenerator>();
     }
 
     private void Start()

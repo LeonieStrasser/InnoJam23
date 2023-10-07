@@ -5,7 +5,7 @@ using NaughtyAttributes;
 
 public class TypeSoundGenerator : MonoBehaviour
 {
-    [Range(0, 1)] public float soundDelay;
+    [Range(0, 8)] public float soundDelay;
     [Tooltip("Hier muss der Soundname rein, den der type SOund im AudioManager hat!")] public string typeSoundName;
 
     float typeSoundTimer;

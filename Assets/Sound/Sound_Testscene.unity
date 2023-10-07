@@ -185,11 +185,29 @@ MonoBehaviour:
     mySource: {fileID: 0}
   - name: Typesound
     myClip: {fileID: 8300000, guid: 091a970c915832c48b344d7e53789d76, type: 3}
-    myVolume: 0.27
+    myVolume: 0.18
     MyLoop: 1
     playFromStart: 0
     randomizePitch: 0
     myPitch: 0.88
+    minMaxPitch: {x: 0.95, y: 1.05}
+    mySource: {fileID: 0}
+  - name: StartSound
+    myClip: {fileID: 8300000, guid: 34dea762ff7b04f45b4dd5f6cd11e946, type: 3}
+    myVolume: 0.27
+    MyLoop: 0
+    playFromStart: 1
+    randomizePitch: 0
+    myPitch: 1
+    minMaxPitch: {x: 0.95, y: 1.05}
+    mySource: {fileID: 0}
+  - name: RightInput
+    myClip: {fileID: 8300000, guid: 24238b1f638329e43b5d70bd87fbc193, type: 3}
+    myVolume: 0.523
+    MyLoop: 0
+    playFromStart: 0
+    randomizePitch: 0
+    myPitch: 1
     minMaxPitch: {x: 0.95, y: 1.05}
     mySource: {fileID: 0}
 --- !u!4 &136733706
@@ -256,7 +274,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5782d4973143edd40b11efab408b87be, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  soundDelay: 1
+  soundDelay: 2
   typeSoundName: Typesound
 --- !u!1 &519420028
 GameObject:
