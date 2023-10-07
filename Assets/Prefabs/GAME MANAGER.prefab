@@ -1,0 +1,97 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &1024272205161838905
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 6609153294704557788}
+  - component: {fileID: 2731952917551914689}
+  - component: {fileID: 2416633423644446968}
+  - component: {fileID: 7777316479776042891}
+  m_Layer: 0
+  m_Name: GAME MANAGER
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &6609153294704557788
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1024272205161838905}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2731952917551914689
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1024272205161838905}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d2c99e11aec71c64fbc2c65f9a02c3cc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  OnPressedKey:
+    m_PersistentCalls:
+      m_Calls: []
+  OnRemovedLastKey:
+    m_PersistentCalls:
+      m_Calls: []
+  OnPressedSubmit:
+    m_PersistentCalls:
+      m_Calls: []
+  providedInputVisual: {fileID: 0}
+--- !u!114 &2416633423644446968
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1024272205161838905}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b20c0f45448a4ac498b0b25bb2404fef, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  OnFullfilledTask:
+    m_PersistentCalls:
+      m_Calls: []
+  OnFailedTask:
+    m_PersistentCalls:
+      m_Calls: []
+  OnFinishedRequiredTasks:
+    m_PersistentCalls:
+      m_Calls: []
+  taskListVisual: {fileID: 0}
+  taskListSize: 10
+  minTaskLength: 3
+  maxTaskLength: 100
+  listGenerator: {fileID: 7777316479776042891}
+--- !u!114 &7777316479776042891
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1024272205161838905}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 98631ac6b3923fd40a7f6e4251935f46, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  workTaskData: {fileID: 4900000, guid: 4d7deb2efdf8425468c49f70c4f1bd32, type: 3}
