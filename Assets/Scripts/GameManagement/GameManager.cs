@@ -59,8 +59,9 @@ public class GameManager : MonoBehaviour
     public void StartRound()
     {
         UIManagement.HideUI();
-        
         Bubble.Reset();
+
+        Time.timeScale = 1;
 
         // fill list
 

@@ -12,3 +12,48 @@ Sprints
 Milestone
 Process Improvement
 Gantt Chart
+Debug Loop
+Code Merge
+Class Object
+API Bug
+Function Syntax
+Database Framework
+Algorithm Loop
+Method Branch
+GUI Interface
+URL Parser
+Exception Handler
+Version Control
+UML Diagram
+JSON Parser
+MVC Architecture
+HTML Template
+Agile Sprint
+CSS Styling
+API Endpoint
+Python Script
+Ruby Gem
+SQL Query
+CLI Interface
+Dependency Injection
+Git Repository
+Leadership
+Delegation
+Communication
+Collaboration
+Goal Setting
+Performance Review
+Feedback
+Conflict Resolution
+Time Management
+Decision Making
+Motivation
+Team Building
+Empowerment
+Coaching
+Accountability
+Trust Building
+Task Allocation
+Prioritization
+Problem Solving
+Innovation

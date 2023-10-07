@@ -25,13 +25,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 499084710903006581}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 4, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0.29828885, w: 0.95447564}
+  m_LocalPosition: {x: -0.36, y: -2.94, z: 0}
+  m_LocalScale: {x: 1, y: 0.8244177, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 9133237686744368640}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: -34.71}
 --- !u!61 &6267872006852021158
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -103,8 +103,8 @@ Transform:
   m_GameObject: {fileID: 3060885955482685545}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 8, y: 6, z: 1}
+  m_LocalPosition: {x: 3.74, y: -0.8, z: 0}
+  m_LocalScale: {x: 0.6, y: 0.6, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 9133237686744368640}
@@ -150,7 +150,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 1
-  m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
+  m_Sprite: {fileID: 21300000, guid: c849fe252acd49f44b01419d127f55d2, type: 3}
   m_Color: {r: 0.754717, g: 0.754717, b: 0.754717, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -210,12 +210,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bf55b5ab41a489b48933b350b24ccde9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Tiredness: 0
   SheepPrefab: {fileID: 3577377807054872890, guid: ae6e4ee53b85e934b9dec1876577a4db, type: 3}
   SpawnPoint: {fileID: 7055586291057957794}
-  SheepSpawnInterval: {x: 13, y: 16}
-  SheepSpawnVelocity: {x: 2, y: 5}
-  MaxSheepHeight: 2.4
+  SheepSpawnInterval: {x: 0.5, y: 5}
+  SheepSpawnScale: {x: 1, y: 2}
+  SheepSpawnVelocity: {x: 4, y: 5}
+  BlackSheepProbability: 0.1
+  MaxSheepHeight: 1
   FloorOffset: 2.4
 --- !u!1 &5483764321172272640
 GameObject:
@@ -243,8 +244,8 @@ Transform:
   m_GameObject: {fileID: 5483764321172272640}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: -3, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: -2.37, y: -4, z: 0}
+  m_LocalScale: {x: 0.5051563, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 9133237686744368640}
@@ -319,7 +320,7 @@ Transform:
   m_GameObject: {fileID: 6208930116302503090}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -3.07, y: 3.28, z: 0}
+  m_LocalPosition: {x: 2.65, y: -0.17, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -351,7 +352,7 @@ Transform:
   m_GameObject: {fileID: 7087284148860271962}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -4, y: 0, z: 0}
+  m_LocalPosition: {x: -4.23, y: -1.09, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
