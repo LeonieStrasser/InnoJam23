@@ -24,9 +24,15 @@ public class TaskInputReceiver : MonoBehaviour
         }
     }
 
+    bool textCursorVisible;
+    float textCursorTime = 0;
+    [SerializeField, Min(0.1f)] float textCursorIntervalSecond = 0.5f;
+
     private void Awake()
     {
         instance = this;
+
+        UpdateVisual();
     }
 
     private void OnDestroy()
@@ -50,6 +56,8 @@ public class TaskInputReceiver : MonoBehaviour
                     AddKey(Input.inputString[Input.inputString.Length - 1]);
             }
         }
+
+        UpdateCursorVisibility();
     }
 
     private void SubmitInput()
@@ -84,6 +92,20 @@ public class TaskInputReceiver : MonoBehaviour
 
     private void UpdateVisual()
     {
-        providedInputVisual.text = playerTypedKeys;
+        if (textCursorVisible)
+            providedInputVisual.text = playerTypedKeys + "_";
+        else
+            providedInputVisual.text = playerTypedKeys;
+    }
+
+    private void UpdateCursorVisibility()
+    {
+        textCursorTime += Time.deltaTime;
+        if (textCursorTime > textCursorIntervalSecond)
+        {
+            textCursorVisible = !textCursorVisible;
+            UpdateVisual();
+            textCursorTime -= textCursorIntervalSecond;
+        }
     }
 }

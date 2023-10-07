@@ -10,6 +10,8 @@ public class GameManager : MonoBehaviour
         RoundInProgress, RoundFinished, GameOver
     }
 
+    [SerializeField] private float DeadlineTime;
+
     private GameState CurrentGameState;
 
     private DreamBubble Bubble;
@@ -29,7 +31,7 @@ public class GameManager : MonoBehaviour
     private void StartRound()
     {
         Bubble.Reset();
-        TimerClock.StartTimer(120f);
+        TimerClock.StartTimer(DeadlineTime);
 
         // fill list
         // start clock

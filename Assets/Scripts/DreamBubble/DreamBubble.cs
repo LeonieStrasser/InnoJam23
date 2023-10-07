@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Security.Cryptography;
 using DG.Tweening;
 using NaughtyAttributes;
 using UnityEngine;
@@ -8,8 +9,7 @@ using Random = UnityEngine.Random;
 
 public class DreamBubble : MonoBehaviour
 {
-    public float Tiredness;
-
+    private float Tiredness;
     public event Action<float> OnTirednessChanged;
     public event Action OnMaxTiredness;
     
@@ -18,8 +18,11 @@ public class DreamBubble : MonoBehaviour
     
     [SerializeField] [MinMaxSlider(0f, 20f)]
     private Vector2 SheepSpawnInterval;
+    
+    [SerializeField] [MinMaxSlider(0f, 10f)]
+    private Vector2 SheepSpawnScale;
 
-    [SerializeField] [MinMaxSlider(0f, 5f)]
+    [SerializeField] [MinMaxSlider(0f, 15f)]
     private Vector2 SheepSpawnVelocity;
 
     [SerializeField] private float MaxSheepHeight = 2.4f;
@@ -61,6 +64,7 @@ public class DreamBubble : MonoBehaviour
     private void SpawnSheep()
     {
         GameObject newSheep = Instantiate(SheepPrefab, SpawnPoint.position, Quaternion.Euler(new Vector3(0, 0, Random.Range(0f, 360f))), gameObject.transform);
+        newSheep.transform.localScale = Vector3.one * Random.Range(SheepSpawnScale.x, SheepSpawnScale.y);
         Rigidbody2D newSheepRb = newSheep.GetComponent<Rigidbody2D>();
         
         newSheepRb.AddForce(Vector2.right * Random.Range(SheepSpawnVelocity.x, SheepSpawnVelocity.y), ForceMode2D.Impulse);
