@@ -170,10 +170,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   taskListSize: 10
   minTaskLength: 3
-  maxTaskLength: 100
-  secondsUntilDeathline: 60
+  maxTaskLength: 20
+  secondsUntilDeathline: 120
   additionalTasksPerRound: 3
-  additionalMinTaskLengthPerRound: 1
-  additionalMaxTaskLengthPerRound: 1
+  additionalMinTaskLengthPerRound: 3
+  additionalMaxTaskLengthPerRound: 10
   additionalSecondsUntilDeathline: 0
   playerRoundAtStart: 0
