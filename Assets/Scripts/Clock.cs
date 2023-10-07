@@ -14,8 +14,6 @@ public class Clock : MonoBehaviour
 
     private bool TimerRunning = false;
 
-    public float NormalisedPassedTime => elapsedTimeThisRound / secondsUntilDeathline;
-
     void Update()
     {
         if (!TimerRunning)
@@ -63,8 +61,10 @@ public class Clock : MonoBehaviour
 
     private void UpdateClockVisuals()
     {
-        ClockRenderer.material.SetFloat("_FillAmount", 1 - NormalisedPassedTime);
+        float fillAmount = elapsedTimeThisRound / secondsUntilDeathline;
 
-        AudioManager.instance.myTickNoise.UpdateTickingVolume(NormalisedPassedTime);
+        ClockRenderer.material.SetFloat("_FillAmount", fillAmount);
+
+        AudioManager.instance.myTickNoise.UpdateTickingVolume(fillAmount);
     }
 }
