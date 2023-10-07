@@ -83,7 +83,7 @@ public class Sheep : MonoBehaviour
 
         ClickHoldActive = true;
 
-        SheepSprite.transform.DOShakePosition(0.2f);
+        SheepSprite.transform.DOShakePosition(3f, 0.2f, 10, 90f, false, false, ShakeRandomnessMode.Full);
     }
 
     private void OnMouseUp()
