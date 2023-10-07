@@ -22,7 +22,7 @@ public class CoffeMug : MonoBehaviour
 
     private void OnMouseExit()
     {
-        scaledSprite.transform.DOScale(scaleIncreaseFactor, 0.2f);
+        scaledSprite.transform.DOScale(spriteStartScale, 0.2f);
     }
 
     private void OnMouseDown()
