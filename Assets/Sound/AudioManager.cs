@@ -40,7 +40,13 @@ public class AudioManager : MonoBehaviour
 
     private void Start()
     {
-        Play("Music");
+        foreach (var item in sounds)
+        {
+            if(item.playFromStart)
+            {
+                Play(item.name);
+            }
+        }
     }
 
     public void Play(string clipName)
