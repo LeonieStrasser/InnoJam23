@@ -351,6 +351,47 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1001 &706814810
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 1803310733788052560, guid: 0dea538048bb6db429bb680bab106442, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -2.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1803310733788052560, guid: 0dea538048bb6db429bb680bab106442, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -4
+      objectReference: {fileID: 0}
+    - target: {fileID: 1803310733788052560, guid: 0dea538048bb6db429bb680bab106442, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1803310733788052560, guid: 0dea538048bb6db429bb680bab106442, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1803310733788052560, guid: 0dea538048bb6db429bb680bab106442, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1803310733788052560, guid: 0dea538048bb6db429bb680bab106442, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3753313116206349386, guid: 0dea538048bb6db429bb680bab106442, type: 3}
+      propertyPath: m_Name
+      value: CoffeeMug
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 0dea538048bb6db429bb680bab106442, type: 3}
 --- !u!1001 &912599250
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -901,3 +942,4 @@ SceneRoots:
   - {fileID: 2093113284}
   - {fileID: 1249721275}
   - {fileID: 912599250}
+  - {fileID: 706814810}
