@@ -22,7 +22,7 @@ public class DreamBubble : MonoBehaviour
     [SerializeField] [MinMaxSlider(0f, 10f)]
     private Vector2 SheepSpawnScale;
 
-    [SerializeField] [MinMaxSlider(0f, 15f)]
+    [SerializeField] [MinMaxSlider(-15f, 15f)]
     private Vector2 SheepSpawnVelocity;
 
     [SerializeField] private float BlackSheepProbability = 0.1f;

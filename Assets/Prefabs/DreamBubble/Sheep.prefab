@@ -174,10 +174,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   SheepSprite: {fileID: 5183046737951217109}
   SheepBlack: {fileID: 21300000, guid: 791b949cb52b3174bba4fdeca26eed91, type: 3}
+  ClickHoldDuration: 0.75
   BlackSheepScaleUpFactor: 3
   BlackSheepScaleUpDuration: 1
   BlackSheepBigDuration: 3
   sheepPuffVFX: {fileID: 4758066341444628334, guid: 90ca6682dd8e4d946bdb71d10dbcb867, type: 3}
+  sheepBlackPuffVFX: {fileID: 4758066341444628334, guid: 2f2eee52b05dbc34487770b14aef9583, type: 3}
 --- !u!1 &3710630532920449200
 GameObject:
   m_ObjectHideFlags: 0
