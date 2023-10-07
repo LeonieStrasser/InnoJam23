@@ -48,9 +48,9 @@ public class MysteriousTickingNoise : MonoBehaviour
         tickingSound.mySource.volume = newVolume;
     }
 
-
+    [Space(20)]
     // DEBUG
-    public float debugRoundProcess;
+    [Range(0,1)] public float debugRoundProcess;
 
     [Button]
     void DebugUpdateTickVolume()

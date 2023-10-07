@@ -66,6 +66,20 @@ public class AudioManager : MonoBehaviour
         soundToPlay.mySource.Play();
     }
 
+    public void Stop(string clipName)
+    {
+        // STop SOund mit dem Namen
+        Sound soundToPlay = Array.Find(sounds, sound => sound.name == clipName);
+
+        if (soundToPlay == null)
+        {
+            Debug.LogWarning("AudioScript Error: Der Clipname -> " + clipName + " <- kann in der Audio Liste nicht gefunden werden! Habt ihr ihn falsch geschrieben ihr Pappnasen???");
+            return;
+        }
+
+        soundToPlay.mySource.Stop();
+    }
+
     public void PlayStackable(string clipName)
     {
         Sound soundToPlay = Array.Find(sounds, sound => sound.name == clipName);
