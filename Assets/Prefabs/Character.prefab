@@ -414,7 +414,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_Sprite: {fileID: 21300000, guid: fb3aa317689c1ad40928a54da1ab1569, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -538,8 +538,8 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 7.18, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
+  m_LocalScale: {x: 0.8, y: 0.8, z: 0.8}
+  m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 4536653079309265107}
   m_Father: {fileID: 0}
@@ -566,6 +566,7 @@ MonoBehaviour:
   HairMessy: {fileID: 21300000, guid: 9269c46760758044b811b4d091905a82, type: 3}
   Head: {fileID: 21300000, guid: 979b3e7acee514541986fb24e7e099b5, type: 3}
   HeadPale: {fileID: 21300000, guid: 67594556232b1da468cf0e298cc130a5, type: 3}
+  FaceChangeCooldownDuration: 1
 --- !u!1 &7060647427339867515
 GameObject:
   m_ObjectHideFlags: 0
@@ -722,7 +723,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_Sprite: {fileID: 21300000, guid: 53a07d6035fb8cb4fb33a3b991a7f04a, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0

@@ -213,6 +213,7 @@ MonoBehaviour:
   Tiredness: 0
   SheepPrefab: {fileID: 3577377807054872890, guid: ae6e4ee53b85e934b9dec1876577a4db, type: 3}
   SpawnPoint: {fileID: 7055586291057957794}
+  SheepSpawnInterval: {x: 13, y: 16}
   SheepSpawnVelocity: {x: 2, y: 5}
   MaxSheepHeight: 2.4
   FloorOffset: 2.4
