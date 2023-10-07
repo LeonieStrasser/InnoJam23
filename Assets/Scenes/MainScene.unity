@@ -192,10 +192,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: GAME MANAGER
       objectReference: {fileID: 0}
-    - target: {fileID: 1110457651529587804, guid: 6b3ac59a13a28c947b1df1aae3875b41, type: 3}
-      propertyPath: DeadlineTime
-      value: 60
-      objectReference: {fileID: 0}
     - target: {fileID: 2416633423644446968, guid: 6b3ac59a13a28c947b1df1aae3875b41, type: 3}
       propertyPath: minTaskLength
       value: 3
