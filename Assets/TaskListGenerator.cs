@@ -21,6 +21,12 @@ public class TaskListGenerator : MonoBehaviour
         HashSet<int> allreadyAdded = new HashSet<int>();
         int nextIndex;
 
+        if (rightLengthTasks.Count < 1)
+        {
+            Debug.LogError($"No Task in list fullfilled Requirements({minTaskLength}-{maxTaskLength} Characters)");
+            return result;
+        }
+
         while (result.Count < listLength)
         {
             nextIndex = Random.Range(0, rightLengthTasks.Count);

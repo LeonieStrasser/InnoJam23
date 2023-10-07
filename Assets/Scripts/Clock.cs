@@ -8,45 +8,53 @@ public class Clock : MonoBehaviour
     public event Action OnTimerFinished;
 
     [SerializeField] private SpriteRenderer ClockRenderer;
-    
-    private float CurrentDuration;
-    private float CurrentTimer;
 
-    private bool TimerRunning;
+    private float secondsUntilDeathline;
+    private float elapsedTimeThisRound;
+
+    private bool TimerRunning = false;
 
     void Update()
     {
         if (!TimerRunning)
             return;
 
-        CurrentTimer += Time.deltaTime;
-        
-        UpdateClockVisuals();
+        elapsedTimeThisRound += Time.deltaTime;
 
-        if (CurrentTimer >= CurrentDuration)
-        {
+        if (elapsedTimeThisRound >= secondsUntilDeathline)
             TimerFinished();
-        }
+        else
+            UpdateClockVisuals();
     }
 
     public void StartTimer(float _duration)
     {
-        CurrentDuration = _duration;
+        Debug.Log("Set Start Timer to " + _duration);
+
+        secondsUntilDeathline = _duration;
+        elapsedTimeThisRound = 0;
 
         TimerRunning = true;
     }
 
     private void TimerFinished()
     {
+        Debug.Log("Timer is Finished");
+
+        TimerRunning = false;
+        elapsedTimeThisRound = secondsUntilDeathline;
+
+        UpdateClockVisuals();
+
         OnTimerFinished?.Invoke();
     }
 
     private void UpdateClockVisuals()
     {
-        float fillAmount = CurrentTimer / CurrentDuration;
-        
-        ClockRenderer.material.SetFloat("_FillAmount", 1- fillAmount);
-        
+        float fillAmount = elapsedTimeThisRound / secondsUntilDeathline;
+
+        ClockRenderer.material.SetFloat("_FillAmount", 1 - fillAmount);
+
         AudioManager.instance.myTickNoise.UpdateTickingVolume(fillAmount);
     }
 }
