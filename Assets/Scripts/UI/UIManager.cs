@@ -16,6 +16,8 @@ public class UIManager : MonoBehaviour
 
     private GameManager GameManagement;
 
+    private RoundManager RoundManagement;
+
     public enum UIType
     {
         Start, TimeGO, SleepGO, Win, Quit
@@ -29,6 +31,7 @@ public class UIManager : MonoBehaviour
     private void Start()
     {
         GameManagement = FindObjectOfType<GameManager>();
+        RoundManagement = FindObjectOfType<RoundManager>();
     }
 
     public void ShowUI(UIType _type)
@@ -74,12 +77,13 @@ public class UIManager : MonoBehaviour
     
     public void StartButtonHit()
     {
-        GameManagement.StartRound();
+        //GameManagement.StartRound();
+        RoundManagement.StartFirstRound();
     }
 
     public void RestartButtonHit()
     {
-        // Round Manager Start First Round
+        RoundManagement.StartFirstRound();
     }
     
     public void ResignButtonHit()
@@ -104,6 +108,6 @@ public class UIManager : MonoBehaviour
     
     public void NextRoundButtonHit()
     {
-        // tell the round manager to start the next round
+        RoundManagement.StartNextRound();
     }
 }

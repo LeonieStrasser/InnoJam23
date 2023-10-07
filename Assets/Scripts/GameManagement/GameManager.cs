@@ -95,7 +95,7 @@ public class GameManager : MonoBehaviour
 
         // do magic
 
-        roundManager.StartNextRound();
+        //roundManager.StartNextRound();
     }
 
     private void DeadlineReached()
