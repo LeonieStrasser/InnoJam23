@@ -5,9 +5,9 @@ using UnityEngine;
 public class RoundManager : MonoBehaviour
 {
     [Header("Start Balancing")]
-    [HideInInspector, Min(1)] public int taskListSize = 10;
-    [HideInInspector, Min(1)] public int minTaskLength = 3;
-    [HideInInspector, Min(1)] public int maxTaskLength = 100;
+    [SerializeField, Min(1)] int taskListSize = 10;
+    [SerializeField, Min(1)] int minTaskLength = 3;
+    [SerializeField, Min(1)] int maxTaskLength = 100;
 
     [Header("Progress Balancing")]
     [SerializeField, Min(0)] int additionalTasksPerRound = 3;
