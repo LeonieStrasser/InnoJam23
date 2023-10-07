@@ -15,6 +15,23 @@ public class GameManager : MonoBehaviour
     private DreamBubble Bubble;
     private Clock TimerClock;
 
+    [SerializeField] RoundManager roundManager;
+
+    private static GameManager instance;
+    public static GameManager Instance
+    {
+        get
+        {
+            if (instance == null)
+                instance = FindObjectOfType<GameManager>();
+            return instance;
+        }
+    }
+
+    private void Awake()
+    {
+        instance = this;
+    }
     private void Start()
     {
         Bubble = FindObjectOfType<DreamBubble>();
@@ -23,10 +40,10 @@ public class GameManager : MonoBehaviour
         TimerClock = FindObjectOfType<Clock>();
         TimerClock.OnTimerFinished += DeadlineReached;
 
-        StartRound();
+        roundManager.StartFirstRound();
     }
 
-    private void StartRound()
+    public void StartRound()
     {
         Bubble.Reset();
         TimerClock.StartTimer(120f);
@@ -53,6 +70,10 @@ public class GameManager : MonoBehaviour
     {
         Debug.Log("Deadline reached, finished enough tasks, SUCCESS");
         CurrentGameState = GameState.RoundFinished;
+
+        // do magic
+
+        roundManager.StartNextRound();
     }
 
     private void DeadlineReached()
