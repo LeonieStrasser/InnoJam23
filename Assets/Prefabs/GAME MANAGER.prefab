@@ -9,6 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6609153294704557788}
+  - component: {fileID: 1110457651529587804}
   - component: {fileID: 2731952917551914689}
   - component: {fileID: 2416633423644446968}
   - component: {fileID: 7777316479776042891}
@@ -34,6 +35,18 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1110457651529587804
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1024272205161838905}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 31c8fe48755d10d4ab8618744c590b95, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &2731952917551914689
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -76,7 +89,19 @@ MonoBehaviour:
       m_Calls: []
   OnFinishedRequiredTasks:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1110457651529587804}
+        m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
+        m_MethodName: SuccessfullDeathline
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   taskListVisual: {fileID: 0}
   taskListSize: 10
   minTaskLength: 3

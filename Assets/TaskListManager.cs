@@ -55,6 +55,8 @@ public class TaskListManager : MonoBehaviour
 
     private void SubmittedTask(string submittedText)
     {
+        if (submittedText.Length < 1) return;
+
         Debug.Log($"Player submitted Task: '{submittedText}'");
 
         foreach (string task in taskList)

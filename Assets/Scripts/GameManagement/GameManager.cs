@@ -11,18 +11,18 @@ public class GameManager : MonoBehaviour
     }
 
     private GameState CurrentGameState;
-    
+
     private DreamBubble Bubble;
     private Clock TimerClock;
-    
+
     private void Start()
     {
         Bubble = FindObjectOfType<DreamBubble>();
         Bubble.OnMaxTiredness += TirednessGameOver;
-        
+
         TimerClock = FindObjectOfType<Clock>();
         TimerClock.OnTimerFinished += DeadlineReached;
-        
+
         StartRound();
     }
 
@@ -30,10 +30,10 @@ public class GameManager : MonoBehaviour
     {
         Bubble.Reset();
         TimerClock.StartTimer(120f);
-        
+
         // fill list
         // start clock
-        
+
         CurrentGameState = GameState.RoundInProgress;
     }
 
@@ -42,18 +42,27 @@ public class GameManager : MonoBehaviour
         Debug.LogWarning("GAME OVER: Too tired.");
         CurrentGameState = GameState.GameOver;
     }
-    
+
     private void DeadlineGameOver()
     {
-        Debug.LogWarning("GAME OVER: Too tired.");
+        Debug.LogWarning("GAME OVER: Not productive enough.");
         CurrentGameState = GameState.GameOver;
+    }
+
+    public void SuccessfullDeathline()
+    {
+        Debug.Log("Deadline reached, finished enough tasks, SUCCESS");
+        CurrentGameState = GameState.RoundFinished;
     }
 
     private void DeadlineReached()
     {
         // check work amount
-        Debug.Log("Deadline reached, checking finished workload...");
-        
+        if (TaskListManager.Instance.AreRequiredWorkTaskFinished)
+            SuccessfullDeathline();
+        else
+            DeadlineGameOver();
+
         //DeadlineGameOver();
     }
 
