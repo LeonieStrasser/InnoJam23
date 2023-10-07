@@ -33,6 +33,8 @@ public class AudioManager : MonoBehaviour
             item.mySource.volume = item.myVolume;
             item.mySource.pitch = item.myPitch;
             item.mySource.loop = item.MyLoop;
+
+
         }
     }
 
@@ -50,6 +52,46 @@ public class AudioManager : MonoBehaviour
             Debug.LogWarning("AudioScript Error: Der Clipname -> " + clipName + " <- kann in der Audio Liste nicht gefunden werden! Habt ihr ihn falsch geschrieben ihr Pappnasen???");
             return;
         }
+
+        if (soundToPlay.randomizePitch)
+        {
+            soundToPlay.mySource.pitch = RandomizePitch(soundToPlay.minMaxPitch);
+        }
         soundToPlay.mySource.Play();
+    }
+
+    public void PlayStackable(string clipName)
+    {
+        Sound soundToPlay = Array.Find(sounds, sound => sound.name == clipName);
+
+        if (soundToPlay == null)
+        {
+            Debug.LogWarning("AudioScript Error: Der Clipname -> " + clipName + " <- kann in der Audio Liste nicht gefunden werden! Habt ihr ihn falsch geschrieben ihr Pappnasen???");
+            return;
+        }
+
+
+
+
+        // Kreiere eine neue Audiosource, damit sich nix gegenseitig abschneidet
+        AudioSource newSource = gameObject.AddComponent<AudioSource>();
+        newSource.clip = soundToPlay.myClip;
+        newSource.volume = soundToPlay.myVolume;
+        newSource.pitch = soundToPlay.myPitch;
+        newSource.loop = soundToPlay.MyLoop;
+        if (soundToPlay.randomizePitch)
+        {
+            newSource.pitch = RandomizePitch(soundToPlay.minMaxPitch);
+        }
+        newSource.Play();
+
+        // Verzögert die Zerstörung der hinzugefügten AudioSource-Komponente, nachdem der Sound abgespielt wurde.
+        Destroy(newSource, soundToPlay.myClip.length);
+    }
+
+    private float RandomizePitch(Vector2 minMaxPitch)
+    {
+        float randomPitch = UnityEngine.Random.Range(minMaxPitch.x, minMaxPitch.y);
+        return randomPitch;
     }
 }

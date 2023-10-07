@@ -133,6 +133,7 @@ GameObject:
   m_Component:
   - component: {fileID: 136733706}
   - component: {fileID: 136733705}
+  - component: {fileID: 136733707}
   m_Layer: 0
   m_Name: AUDIOMANAGER
   m_TagString: Untagged
@@ -155,11 +156,19 @@ MonoBehaviour:
   sounds:
   - name: Music
     myClip: {fileID: 8300000, guid: a8e5acd61bc536b49920751d6408232e, type: 3}
-    myVolume: 0
-    myPitch: 0
-    MyLoop: 0
+    myVolume: 0.466
+    MyLoop: 1
     randomizePitch: 0
-    minMaxPitch: {x: 0, y: 0}
+    myPitch: 1
+    minMaxPitch: {x: 0, y: 3}
+    mySource: {fileID: 0}
+  - name: Sheep
+    myClip: {fileID: 8300000, guid: c6175231a06e707478a64df6b8bb9e76, type: 3}
+    myVolume: 0.466
+    MyLoop: 0
+    randomizePitch: 1
+    myPitch: 1
+    minMaxPitch: {x: 0.86549705, y: 2.0409358}
     mySource: {fileID: 0}
 --- !u!4 &136733706
 Transform:
@@ -176,6 +185,19 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &136733707
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 136733704}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 36c26cb7de36410488f0171f00908b7b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  soundToPlay: Sheep
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0
