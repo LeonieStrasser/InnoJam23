@@ -59,7 +59,7 @@ MonoBehaviour:
     minMaxPitch: {x: 0, y: 3}
     mySource: {fileID: 0}
   - name: Sheep
-    myClip: {fileID: 8300000, guid: c6175231a06e707478a64df6b8bb9e76, type: 3}
+    myClip: {fileID: 8300000, guid: 7263179f747335a41b99d444e2ca94b1, type: 3}
     myVolume: 0.466
     MyLoop: 0
     playFromStart: 0

@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 2731952917551914689}
   - component: {fileID: 2416633423644446968}
   - component: {fileID: 7777316479776042891}
+  - component: {fileID: 6798702400873791591}
   m_Layer: 0
   m_Name: GAME MANAGER
   m_TagString: Untagged
@@ -47,6 +48,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 31c8fe48755d10d4ab8618744c590b95, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  roundManager: {fileID: 6798702400873791591}
 --- !u!114 &2731952917551914689
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -90,23 +92,8 @@ MonoBehaviour:
       m_Calls: []
   OnFinishedRequiredTasks:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1110457651529587804}
-        m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
-        m_MethodName: SuccessfullDeathline
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
   taskListVisual: {fileID: 0}
-  taskListSize: 10
-  minTaskLength: 3
-  maxTaskLength: 100
   listGenerator: {fileID: 7777316479776042891}
 --- !u!114 &7777316479776042891
 MonoBehaviour:
@@ -121,3 +108,22 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   workTaskData: {fileID: 4900000, guid: 4d7deb2efdf8425468c49f70c4f1bd32, type: 3}
+--- !u!114 &6798702400873791591
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1024272205161838905}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 06cd019014079214badaf54c61e9ed55, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  taskListSize: 10
+  minTaskLength: 3
+  maxTaskLength: 100
+  additionalTasksPerRound: 3
+  additionalMinTaskLengthPerRound: 1
+  additionalMaxTaskLengthPerRound: 1
+  alreadyPlayerRoundsAtStart: 0

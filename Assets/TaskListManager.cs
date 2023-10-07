@@ -9,10 +9,6 @@ public class TaskListManager : MonoBehaviour
     public UnityEngine.Events.UnityEvent OnFinishedRequiredTasks;
 
     [SerializeField] TMPro.TMP_Text taskListVisual;
-    [Space]
-    [SerializeField, Min(1)] int taskListSize = 10;
-    [SerializeField, Min(1)] int minTaskLength = 3;
-    [SerializeField, Min(1)] int maxTaskLength = 100;
     [SerializeField] TaskListGenerator listGenerator;
     List<string> taskList;
     public bool AreRequiredWorkTaskFinished => taskList.Count == 0;
@@ -34,8 +30,6 @@ public class TaskListManager : MonoBehaviour
         instance = this;
 
         TaskInputReceiver.Instance.OnPressedSubmitWithText += SubmittedTask;
-
-        InitialiseList();
     }
 
     private void OnDestroy()
@@ -47,7 +41,7 @@ public class TaskListManager : MonoBehaviour
             TaskInputReceiver.Instance.OnPressedSubmitWithText -= SubmittedTask;
     }
 
-    private void InitialiseList()
+    public void InitialiseList(int taskListSize,int minTaskLength, int maxTaskLength)
     {
         taskList = listGenerator.GenerateList(taskListSize, minTaskLength, maxTaskLength);
         UpdateTaskListVisual();
@@ -80,7 +74,10 @@ public class TaskListManager : MonoBehaviour
         UpdateTaskListVisual();
 
         if (AreRequiredWorkTaskFinished)
+        {
+            GameManager.Instance.SuccessfullDeathline();
             OnFinishedRequiredTasks?.Invoke();
+        }
     }
 
     private void FailedTask(string sublittedText)
