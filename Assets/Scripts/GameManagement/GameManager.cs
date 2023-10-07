@@ -94,8 +94,6 @@ public class GameManager : MonoBehaviour
         CurrentGameState = GameState.RoundFinished;
 
         // do magic
-
-        //roundManager.StartNextRound();
     }
 
     private void DeadlineReached()

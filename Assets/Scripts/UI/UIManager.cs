@@ -13,9 +13,7 @@ public class UIManager : MonoBehaviour
     [SerializeField] private GameObject QuitScreen;
     
     [SerializeField] private GameObject ScreenBackround;
-
-    private GameManager GameManagement;
-
+    
     private RoundManager RoundManagement;
 
     public enum UIType
@@ -30,7 +28,6 @@ public class UIManager : MonoBehaviour
 
     private void Start()
     {
-        GameManagement = FindObjectOfType<GameManager>();
         RoundManagement = FindObjectOfType<RoundManager>();
     }
 
@@ -77,7 +74,6 @@ public class UIManager : MonoBehaviour
     
     public void StartButtonHit()
     {
-        //GameManagement.StartRound();
         RoundManagement.StartFirstRound();
     }
 
