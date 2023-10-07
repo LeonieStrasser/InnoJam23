@@ -10,15 +10,16 @@ public class NeonRohr : MonoBehaviour
 
    
 
-    public void UpdateNeonColor(float lerpValue)
+    public void Update()
     {
         // Lerp den "AlertState" von seinem aktuellen Wert zum Zielwert (1.0) über die Zeit.
-        currentAlertState = Mathf.Lerp(currentAlertState, 1.0f, lerpValue);
+        currentAlertState = Mathf.Lerp(0, 1.0f, RoundManager.Instance.NormalisedPassedTime);
+        Debug.Log(currentAlertState);
 
         // Setzen Sie den neuen Wert des "AlertState" im Material.
         foreach (var item in sprites)
         {
-            item.material.SetFloat("AlertState", currentAlertState);
+            item.material.SetFloat("_AlertState", currentAlertState);
         }
 
         
