@@ -122,8 +122,8 @@ public class DreamBubble : MonoBehaviour
 
     private bool ShouldSpawnBlackSheep()
     {
-        int random = Random.Range(1, 11);
+        float random = Random.Range(0f, 0.9f);
 
-        return BlackSheepProbability * 10f <= random;
+        return random <= BlackSheepProbability;
     }
 }

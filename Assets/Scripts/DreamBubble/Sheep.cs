@@ -35,16 +35,25 @@ public class Sheep : MonoBehaviour
 
     private void OnMouseOver()
     {
+        if (ImmuneToMouse)
+            return;
+        
         SheepSprite.transform.DOScale(SpriteStartScale * 1.2f, 0.2f);
     }
 
     private void OnMouseExit()
     {
+        if (ImmuneToMouse)
+            return;
+        
         SheepSprite.transform.DOScale(SpriteStartScale, 0.2f);
     }
 
     private void OnMouseDown()
     {
+        if (ImmuneToMouse)
+            return;
+        
         AudioManager.instance.PlayStackable("Sheep");
 
         if (IsBlack)
@@ -59,6 +68,10 @@ public class Sheep : MonoBehaviour
 
     private IEnumerator BlackSheepClick()
     {
+        ImmuneToMouse = true;
+
+        transform.position -= new Vector3(0, 0, 0.15f);
+        
         SheepSprite.transform.DOKill();
         SheepSprite.transform.DOScale(SpriteStartScale * BlackSheepScaleUpFactor, BlackSheepScaleUpDuration);
 

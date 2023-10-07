@@ -27,7 +27,7 @@ Transform:
   m_GameObject: {fileID: 3351934506661697290}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.024, y: 0.101, z: 0}
+  m_LocalPosition: {x: 0.024, y: 0.101, z: -0.1}
   m_LocalScale: {x: 0.12, y: 0.12, z: 0.12}
   m_ConstrainProportionsScale: 1
   m_Children: []
@@ -73,7 +73,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 3
+  m_SortingOrder: 2
   m_Sprite: {fileID: 21300000, guid: 859c86de8a5811d4899c37485eb27935, type: 3}
   m_Color: {r: 0.103773594, g: 0.103773594, b: 0.103773594, a: 1}
   m_FlipX: 0
@@ -174,7 +174,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   SheepSprite: {fileID: 5183046737951217109}
   SheepBlack: {fileID: 21300000, guid: 791b949cb52b3174bba4fdeca26eed91, type: 3}
-  BlackSheepScaleFactor: 3
+  BlackSheepScaleUpFactor: 3
   BlackSheepScaleUpDuration: 1
   BlackSheepBigDuration: 3
   sheepPuffVFX: {fileID: 4758066341444628334, guid: 90ca6682dd8e4d946bdb71d10dbcb867, type: 3}
@@ -237,7 +237,7 @@ Transform:
   m_GameObject: {fileID: 4193894443164410892}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.023999998, y: 0.100999966, z: 0}
+  m_LocalPosition: {x: 0.023999998, y: 0.100999966, z: -0.1}
   m_LocalScale: {x: 0.12, y: 0.12, z: 0.12}
   m_ConstrainProportionsScale: 1
   m_Children: []
@@ -283,7 +283,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 3
+  m_SortingOrder: 2
   m_Sprite: {fileID: 21300000, guid: 859c86de8a5811d4899c37485eb27935, type: 3}
   m_Color: {r: 0.103773594, g: 0.103773594, b: 0.103773594, a: 1}
   m_FlipX: 0
@@ -338,6 +338,7 @@ Transform:
   m_LocalScale: {x: 0.11, y: 0.11, z: 0.11}
   m_ConstrainProportionsScale: 1
   m_Children:
+  - {fileID: 3038864209068694681}
   - {fileID: 7010420538821025623}
   - {fileID: 7385982224110758914}
   m_Father: {fileID: 7626383257147544902}
@@ -493,3 +494,70 @@ Transform:
   - {fileID: 7243444282055630369}
   m_Father: {fileID: 4389625625768100522}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &9117108519100937662
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 3038864209068694681}
+  - component: {fileID: 807293197850976063}
+  m_Layer: 0
+  m_Name: Sheep_Overlap
+  m_TagString: Sheep
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &3038864209068694681
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9117108519100937662}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 9.090909, y: 9.090909, z: 9.090909}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 4389625625768100522}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!58 &807293197850976063
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9117108519100937662}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Radius: 0.5
