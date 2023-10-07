@@ -82,10 +82,14 @@ public class Sheep : MonoBehaviour
             return;
 
         ClickHoldActive = true;
+
+        SheepSprite.transform.DOShakePosition(0.2f);
     }
 
     private void OnMouseUp()
     {
+        SheepSprite.transform.DOKill();
+        
         ResetClickHold();
     }
 
