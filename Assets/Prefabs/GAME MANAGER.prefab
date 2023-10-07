@@ -69,6 +69,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   providedInputVisual: {fileID: 0}
+  textCursorIntervalSecond: 0.5
 --- !u!114 &2416633423644446968
 MonoBehaviour:
   m_ObjectHideFlags: 0
