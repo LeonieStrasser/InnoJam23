@@ -258,11 +258,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6798702400873791591, guid: 6b3ac59a13a28c947b1df1aae3875b41, type: 3}
       propertyPath: taskListSize
-      value: 6
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 6798702400873791591, guid: 6b3ac59a13a28c947b1df1aae3875b41, type: 3}
       propertyPath: maxTaskLength
-      value: 10
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 6798702400873791591, guid: 6b3ac59a13a28c947b1df1aae3875b41, type: 3}
       propertyPath: minTaskLength
@@ -277,16 +277,20 @@ PrefabInstance:
       value: 0.18
       objectReference: {fileID: 0}
     - target: {fileID: 6798702400873791591, guid: 6b3ac59a13a28c947b1df1aae3875b41, type: 3}
+      propertyPath: finalProjectDay
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6798702400873791591, guid: 6b3ac59a13a28c947b1df1aae3875b41, type: 3}
       propertyPath: secondsUntilDeathline
       value: 60
       objectReference: {fileID: 0}
     - target: {fileID: 6798702400873791591, guid: 6b3ac59a13a28c947b1df1aae3875b41, type: 3}
       propertyPath: additionalTasksPerRound
-      value: 4
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 6798702400873791591, guid: 6b3ac59a13a28c947b1df1aae3875b41, type: 3}
       propertyPath: additionalMaxTaskLengthPerRound
-      value: 50
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 6798702400873791591, guid: 6b3ac59a13a28c947b1df1aae3875b41, type: 3}
       propertyPath: additionalMinTaskLengthPerRound
@@ -294,7 +298,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6798702400873791591, guid: 6b3ac59a13a28c947b1df1aae3875b41, type: 3}
       propertyPath: additionalSecondsUntilDeathline
-      value: 10
+      value: 20
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
