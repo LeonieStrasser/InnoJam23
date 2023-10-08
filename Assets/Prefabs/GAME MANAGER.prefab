@@ -171,10 +171,11 @@ MonoBehaviour:
   minTaskLength: 5
   maxTaskLength: 10
   secondsUntilDeathline: 60
+  finalProjectDay: 15
   additionalTasksPerRound: 4
   additionalMinTaskLengthPerRound: 3
-  additionalMaxTaskLengthPerRound: 50
-  additionalSecondsUntilDeathline: 2
+  additionalMaxTaskLengthPerRound: 8
+  additionalSecondsUntilDeathline: 5
   keptWhiteSheep: 0.1
-  keptBlackSheep: 0.7
+  keptBlackSheep: 0.8
   playerRoundAtStart: 0

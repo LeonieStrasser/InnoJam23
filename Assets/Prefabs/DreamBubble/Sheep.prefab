@@ -180,7 +180,8 @@ MonoBehaviour:
   BlackSheepBigDuration: 2
   sheepPuffVFX: {fileID: 4758066341444628334, guid: 90ca6682dd8e4d946bdb71d10dbcb867, type: 3}
   sheepBlackPuffVFX: {fileID: 4758066341444628334, guid: 2f2eee52b05dbc34487770b14aef9583, type: 3}
-  meehRandomizeValue: {x: 2, y: 4}
+  meehRandomizeValue: {x: 1.5, y: 3}
+  isDying: 0
 --- !u!1 &3710630532920449200
 GameObject:
   m_ObjectHideFlags: 0
