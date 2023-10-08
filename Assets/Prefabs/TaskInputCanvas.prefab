@@ -114,6 +114,7 @@ GameObject:
   - component: {fileID: 3385684594600912053}
   - component: {fileID: 1658487720449142106}
   - component: {fileID: 4464800722384794910}
+  - component: {fileID: 9151940559875581323}
   m_Layer: 5
   m_Name: TaskTextList
   m_TagString: Untagged
@@ -129,7 +130,7 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 934691367467768826}
   m_LocalRotation: {x: -0.019221377, y: -0.07848591, z: 0.08284135, w: 0.99328136}
-  m_LocalPosition: {x: 0, y: 0, z: -151}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -241,6 +242,19 @@ MonoBehaviour:
   m_hasFontAssetChanged: 0
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+--- !u!114 &9151940559875581323
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 934691367467768826}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 85e5d4c1b6cab2b4291c231dd16a4f45, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sortingOrder: 40
 --- !u!1 &8400505390762558013
 GameObject:
   m_ObjectHideFlags: 0

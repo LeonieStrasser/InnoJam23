@@ -1015,7 +1015,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Go to the next day
+  m_text: Start the next day
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 7feca9f122487cc46ab6efe1cf272c55, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -1149,7 +1149,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Good job. I'm sure you can do even better tomorrow!
+  m_text: Good job! I'm sure you can do even better tomorrow!
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 7feca9f122487cc46ab6efe1cf272c55, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -2167,7 +2167,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Resign
+  m_text: Leave
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 7feca9f122487cc46ab6efe1cf272c55, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
