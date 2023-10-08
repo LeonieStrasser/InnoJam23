@@ -24,8 +24,8 @@ public class TaskListGenerator : MonoBehaviour
 
         if (rightLengthTasks.Count < 1)
         {
-            Debug.LogError($"No Task in list fullfilled Requirements({minTaskLength}-{maxTaskLength} Characters)");
-            return result;
+            Debug.LogWarning($"No Task in list fullfilled Requirements({minTaskLength}-{maxTaskLength} Characters)");
+            return GenerateList(listLength, Mathf.Max(0, minTaskLength - 1), Mathf.Max(minTaskLength, maxTaskLength + 1));
         }
 
         while (result.Count < listLength)
@@ -43,12 +43,12 @@ public class TaskListGenerator : MonoBehaviour
 
     private string[] GetAllTasks()
     {
-        string[] files = Directory.GetFiles(DataFolderPath,"*.txt");
+        string[] files = Directory.GetFiles(DataFolderPath, "*.txt");
 
-        if (files.Length < 1) return new string[] {"Missing Files"};
+        if (files.Length < 1) return new string[] { "Missing Files" };
 
         string[] result = File.ReadAllLines(files[Random.Range(0, files.Length)]);
-        
+
         for (int i = 0; i < result.Length; i++)
         {
             result[i] = result[i].Trim().Replace("  ", " ");

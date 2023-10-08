@@ -94,7 +94,7 @@ public class GameManager : MonoBehaviour
     {
         Debug.Log("Deadline reached, finished enough tasks, SUCCESS");
         Time.timeScale = 0;
-        UIManagement.ShowUI(UIManager.UIType.Win);
+        UIManagement.ShowUI(UIManager.UIType.WinRound);
         CurrentGameState = GameState.RoundFinished;
 
         // do magic

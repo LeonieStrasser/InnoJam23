@@ -10,6 +10,7 @@ public class RoundManager : MonoBehaviour
     [SerializeField, Min(1)] int maxTaskLength = 100;
     [Space]
     [SerializeField, Min(15)] int secondsUntilDeathline = 15;
+    [SerializeField, Min(1)] int finalProjectDay = 15;
 
     [Header("Progress Balancing")]
     [SerializeField, Min(0)] int additionalTasksPerRound = 3;
@@ -63,6 +64,9 @@ public class RoundManager : MonoBehaviour
     public void StartFirstRound()
     {
         roundCounter = playerRoundAtStart;
+
+        Calendar.Instance?.SetTargetDay(finalProjectDay);
+
         StartRound(roundCounter);
     }
 
@@ -84,7 +88,9 @@ public class RoundManager : MonoBehaviour
         TimerClock.StartTimer(secondsUntilDeathline + additionalSecondsUntilDeathline * round);
 
         GameManager.Instance.Bubble.RemoveSheep(keptWhiteSheep, keptBlackSheep);
+        Calendar.Instance?.SetCheckmarks(roundCounter);
         CoffeMug.Instance.ResetCoffee();
+        
         GameManager.Instance.StartRound();
     }
 

@@ -18,7 +18,7 @@ public class UIManager : MonoBehaviour
 
     public enum UIType
     {
-        Start, TimeGO, SleepGO, Win, Quit
+        Start, TimeGO, SleepGO, WinRound, Quit
     }
 
     private UIType CurrentUIType;
@@ -56,7 +56,7 @@ public class UIManager : MonoBehaviour
                 CurrentActiveUI = SleepGameOverScreen;
                 SleepGameOverScreen.SetActive(true);
                 break;
-            case UIType.Win:
+            case UIType.WinRound:
                 CurrentActiveUI = RoundWonScreen;
                 RoundWonScreen.SetActive(true);
                 break;
