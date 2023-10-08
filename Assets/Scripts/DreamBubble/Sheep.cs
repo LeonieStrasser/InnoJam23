@@ -5,6 +5,7 @@ using UnityEngine;
 using DG.Tweening;
 using Unity.VisualScripting;
 using UnityEditor;
+using NaughtyAttributes;
 
 public class Sheep : MonoBehaviour
 {
@@ -19,6 +20,10 @@ public class Sheep : MonoBehaviour
 
     [SerializeField] private GameObject sheepPuffVFX;
     [SerializeField] private GameObject sheepBlackPuffVFX;
+
+    float meehTimer = 0;
+    float randomNextMeehTime = 0;
+    [MinMaxSlider(0, 60)] public Vector2 meehRandomizeValue;
 
     private DreamBubble Bubble;
 
@@ -42,6 +47,8 @@ public class Sheep : MonoBehaviour
 
     private void Update()
     {
+        UpdateRandomMeehTimer();
+
         if (!ClickHoldActive)
             return;
 
@@ -52,6 +59,7 @@ public class Sheep : MonoBehaviour
             OnClickedLongEnough();
             ResetClickHold();
         }
+
     }
 
     private void OnCollisionEnter2D(Collision2D other)
@@ -144,5 +152,19 @@ public class Sheep : MonoBehaviour
         SheepSprite.transform.DOKill();
         Bubble.UpdateTiredness();
         Bubble.DestroySheep(this);
+    }
+
+
+
+    void UpdateRandomMeehTimer()
+    {
+        meehTimer += Time.deltaTime;
+        if (meehTimer > randomNextMeehTime)
+        {
+            meehTimer = 0;
+            AudioManager.instance.PlayStackable("SheepBackground"); // M‰‰‰h!!!!
+            randomNextMeehTime = UnityEngine.Random.Range(meehRandomizeValue.x, meehRandomizeValue.y);
+
+        }
     }
 }
