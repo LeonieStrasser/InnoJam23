@@ -31,8 +31,8 @@ public class DreamBubble : MonoBehaviour
 
     [SerializeField] private float BlackSheepProbability = 0.1f;
 
-    [SerializeField] private float MaxSheepHeight = 2.4f;
-    [SerializeField] private float FloorOffset = 2.4f;
+    [SerializeField] private Transform MaxHeightMarker;
+    [SerializeField] private Transform FloorHeightMarker;
 
     private List<Sheep> AllSheep = new List<Sheep>();
 
@@ -122,18 +122,24 @@ public class DreamBubble : MonoBehaviour
 
     public void UpdateTiredness()
     {
-        float topHeight = 0;
+        float topHeight = -200;
+
+        if (AllSheep.Count == 0)
+        {
+            Tiredness = 0;
+            return;
+        }
 
         foreach (Sheep sheep in AllSheep)
         {
-            if (sheep.GetComponent<Rigidbody2D>().velocity.magnitude > 0.5f)
+            if (sheep.GetComponent<Rigidbody2D>().velocity.magnitude > 0.2f)
                 continue;
 
-            if (sheep.Height + FloorOffset > topHeight)
-                topHeight = sheep.Height + FloorOffset;
+            if (sheep.Height > topHeight)
+                topHeight = sheep.Height;
         }
 
-        Tiredness = Mathf.Clamp(topHeight / (MaxSheepHeight + FloorOffset), 0f, 1f);
+        Tiredness = Mathf.InverseLerp(FloorHeightMarker.localPosition.y, MaxHeightMarker.localPosition.y, topHeight);
 
         OnTirednessChanged?.Invoke(Tiredness);
 
