@@ -67,7 +67,7 @@ MonoBehaviour:
       m_Calls: []
   m_text: Look for new work
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: d8d09b1d551d042458afceb398795135, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: e3762f311bbedcf4bbdfa0f31488480f, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
@@ -334,7 +334,7 @@ MonoBehaviour:
       m_Calls: []
   m_text: Find your dream job!
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: d8d09b1d551d042458afceb398795135, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: e3762f311bbedcf4bbdfa0f31488480f, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
@@ -637,7 +637,7 @@ MonoBehaviour:
       m_Calls: []
   m_text: Look for new work
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: d8d09b1d551d042458afceb398795135, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: e3762f311bbedcf4bbdfa0f31488480f, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
@@ -1017,7 +1017,7 @@ MonoBehaviour:
       m_Calls: []
   m_text: Go to the next day
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: d8d09b1d551d042458afceb398795135, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: e3762f311bbedcf4bbdfa0f31488480f, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
@@ -1151,7 +1151,7 @@ MonoBehaviour:
       m_Calls: []
   m_text: Good job. I'm sure you can do even better tomorrow!
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: d8d09b1d551d042458afceb398795135, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: e3762f311bbedcf4bbdfa0f31488480f, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
@@ -1285,7 +1285,7 @@ MonoBehaviour:
       m_Calls: []
   m_text: I quit, this is a nightmare!
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: d8d09b1d551d042458afceb398795135, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: e3762f311bbedcf4bbdfa0f31488480f, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
@@ -1694,7 +1694,7 @@ MonoBehaviour:
       m_Calls: []
   m_text: You fell asleep at the job! You are FIRED!
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: d8d09b1d551d042458afceb398795135, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: e3762f311bbedcf4bbdfa0f31488480f, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
@@ -1828,7 +1828,7 @@ MonoBehaviour:
       m_Calls: []
   m_text: You are right, I want to continue working
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: d8d09b1d551d042458afceb398795135, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: e3762f311bbedcf4bbdfa0f31488480f, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
@@ -2169,7 +2169,7 @@ MonoBehaviour:
       m_Calls: []
   m_text: Resign
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: d8d09b1d551d042458afceb398795135, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: e3762f311bbedcf4bbdfa0f31488480f, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
@@ -2589,7 +2589,7 @@ MonoBehaviour:
       m_Calls: []
   m_text: Quitting? You will never reach your dream like this!
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: d8d09b1d551d042458afceb398795135, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: e3762f311bbedcf4bbdfa0f31488480f, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
@@ -2723,7 +2723,7 @@ MonoBehaviour:
       m_Calls: []
   m_text: You did not finish your work! You are FIRED!
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: d8d09b1d551d042458afceb398795135, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: e3762f311bbedcf4bbdfa0f31488480f, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
