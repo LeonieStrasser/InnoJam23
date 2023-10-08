@@ -73,7 +73,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 2
+  m_SortingOrder: 116
   m_Sprite: {fileID: 21300000, guid: 859c86de8a5811d4899c37485eb27935, type: 3}
   m_Color: {r: 0.103773594, g: 0.103773594, b: 0.103773594, a: 1}
   m_FlipX: 0
@@ -174,7 +174,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   SheepSprite: {fileID: 5183046737951217109}
   SheepBlack: {fileID: 21300000, guid: 791b949cb52b3174bba4fdeca26eed91, type: 3}
-  ClickHoldDuration: 0.6
+  ClickHoldDuration: 0.3
   BlackSheepScaleUpFactor: 3
   BlackSheepScaleUpDuration: 1
   BlackSheepBigDuration: 2
@@ -286,7 +286,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 2
+  m_SortingOrder: 116
   m_Sprite: {fileID: 21300000, guid: 859c86de8a5811d4899c37485eb27935, type: 3}
   m_Color: {r: 0.103773594, g: 0.103773594, b: 0.103773594, a: 1}
   m_FlipX: 0
@@ -386,7 +386,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 2
+  m_SortingOrder: 110
   m_Sprite: {fileID: 21300000, guid: e3cacabcbb267474291893b39462bcca, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0

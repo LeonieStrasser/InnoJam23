@@ -155,7 +155,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 98631ac6b3923fd40a7f6e4251935f46, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  workTaskData: {fileID: 4900000, guid: 4d7deb2efdf8425468c49f70c4f1bd32, type: 3}
 --- !u!114 &6798702400873791591
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -168,12 +167,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 06cd019014079214badaf54c61e9ed55, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  taskListSize: 10
-  minTaskLength: 3
-  maxTaskLength: 20
-  secondsUntilDeathline: 120
-  additionalTasksPerRound: 3
+  taskListSize: 6
+  minTaskLength: 5
+  maxTaskLength: 10
+  secondsUntilDeathline: 60
+  additionalTasksPerRound: 4
   additionalMinTaskLengthPerRound: 3
-  additionalMaxTaskLengthPerRound: 10
-  additionalSecondsUntilDeathline: 0
+  additionalMaxTaskLengthPerRound: 50
+  additionalSecondsUntilDeathline: 2
+  keptWhiteSheep: 0.1
+  keptBlackSheep: 0.7
   playerRoundAtStart: 0
