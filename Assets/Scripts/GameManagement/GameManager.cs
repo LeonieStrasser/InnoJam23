@@ -7,7 +7,7 @@ using UnityEngine;
 public class GameManager : MonoBehaviour
 {
     private UIManager UIManagement;
-    
+
     private enum GameState
     {
         RoundInProgress, RoundFinished, GameOver
@@ -15,8 +15,8 @@ public class GameManager : MonoBehaviour
 
     private GameState CurrentGameState;
 
-    private DreamBubble Bubble;
-    private Clock TimerClock;
+    public DreamBubble Bubble { get; private set; }
+    public Clock TimerClock{ get; private set; }
 
     [SerializeField] RoundManager roundManager;
 
@@ -38,7 +38,7 @@ public class GameManager : MonoBehaviour
     private void Start()
     {
         UIManagement = FindObjectOfType<UIManager>();
-        
+
         Bubble = FindObjectOfType<DreamBubble>();
         Bubble.OnMaxTiredness += TirednessGameOver;
 
@@ -46,7 +46,7 @@ public class GameManager : MonoBehaviour
         TimerClock.OnTimerFinished += DeadlineReached;
 
         Time.timeScale = 0;
-        
+
         UIManagement.ShowUI(UIManager.UIType.Start);
     }
 
@@ -61,18 +61,15 @@ public class GameManager : MonoBehaviour
     public void Restart()
     {
         // reset future calendar-stuff here
-        
-        StartRound();
+
+        roundManager.StartNextRound();
     }
 
     public void StartRound()
     {
         UIManagement.HideUI();
-        Bubble.Reset();
 
         Time.timeScale = 1;
-
-        // fill list
 
         CurrentGameState = GameState.RoundInProgress;
     }

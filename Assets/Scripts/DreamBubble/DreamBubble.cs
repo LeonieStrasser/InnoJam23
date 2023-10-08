@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using System.Security.Cryptography;
 using DG.Tweening;
 using NaughtyAttributes;
@@ -12,17 +13,20 @@ public class DreamBubble : MonoBehaviour
     private float Tiredness;
     public event Action<float> OnTirednessChanged;
     public event Action OnMaxTiredness;
-    
+
     [SerializeField] private GameObject SheepPrefab;
     [SerializeField] private Transform SpawnPoint;
-    
-    [SerializeField] [MinMaxSlider(0f, 20f)]
+
+    [SerializeField]
+    [MinMaxSlider(0f, 20f)]
     private Vector2 SheepSpawnInterval;
-    
-    [SerializeField] [MinMaxSlider(0f, 10f)]
+
+    [SerializeField]
+    [MinMaxSlider(0f, 10f)]
     private Vector2 SheepSpawnScale;
 
-    [SerializeField] [MinMaxSlider(-15f, 15f)]
+    [SerializeField]
+    [MinMaxSlider(-15f, 15f)]
     private Vector2 SheepSpawnVelocity;
 
     [SerializeField] private float BlackSheepProbability = 0.1f;
@@ -77,7 +81,7 @@ public class DreamBubble : MonoBehaviour
 
         CurrentSpawnInterval = Random.Range(SheepSpawnInterval.x, SheepSpawnInterval.y);
     }
-    
+
     [Button]
     private void SpawnSheep()
     {
@@ -85,56 +89,53 @@ public class DreamBubble : MonoBehaviour
 
         Sheep newSheepComponent = newSheep.GetComponent<Sheep>();
         AllSheep.Add(newSheepComponent);
-        
-        if(ShouldSpawnBlackSheep())
+
+        if (ShouldSpawnBlackSheep())
             newSheepComponent.MakeBlack();
-        
+
         newSheep.transform.localScale = Vector3.one * Random.Range(SheepSpawnScale.x, SheepSpawnScale.y);
         Rigidbody2D newSheepRb = newSheep.GetComponent<Rigidbody2D>();
-        
+
         newSheepRb.AddForce(Vector2.right * Random.Range(SheepSpawnVelocity.x, SheepSpawnVelocity.y), ForceMode2D.Impulse);
     }
 
     public void DestroySheep(Sheep _sheep)
     {
         AllSheep.Remove(_sheep);
-        
+
         _sheep.gameObject.SetActive(false);
         // play disappear animations or something like that here
         Destroy(_sheep.gameObject, 0.5f);
     }
 
     [Button]
-    public void Reset()
+    public void Reset(float normalisedKeptWhiteSheep, float normalisedKeptBlackSheep)
     {
-        foreach (var sheep in AllSheep)
-            Destroy(sheep.gameObject);
-        
-        AllSheep.Clear();
+        CurbSheep(normalisedKeptWhiteSheep, isBlack: false);
+        CurbSheep(normalisedKeptBlackSheep, isBlack: true);
 
-        Tiredness = 0;
-
+        UpdateTiredness();
         OnTirednessChanged?.Invoke(Tiredness);
     }
 
     public void UpdateTiredness()
     {
         float topHeight = 0;
-        
+
         foreach (Sheep sheep in AllSheep)
         {
-            if(sheep.GetComponent<Rigidbody2D>().velocity.magnitude > 0.5f)
+            if (sheep.GetComponent<Rigidbody2D>().velocity.magnitude > 0.5f)
                 continue;
-            
-            if (sheep.transform.localPosition.y + FloorOffset > topHeight)
-                topHeight = sheep.transform.localPosition.y + FloorOffset;
+
+            if (sheep.Height + FloorOffset > topHeight)
+                topHeight = sheep.Height + FloorOffset;
         }
-        
+
         Tiredness = Mathf.Clamp(topHeight / (MaxSheepHeight + FloorOffset), 0f, 1f);
-        
+
         OnTirednessChanged?.Invoke(Tiredness);
-        
-        if(Tiredness >= 1f)
+
+        if (Tiredness >= 1f)
             OnMaxTiredness?.Invoke();
     }
 
@@ -143,5 +144,27 @@ public class DreamBubble : MonoBehaviour
         float random = Random.Range(0f, 0.9f);
 
         return random <= BlackSheepProbability;
+    }
+
+    private void CurbSheep(float normalisedKeptSheep, bool isBlack)
+    {
+        IEnumerable<Sheep> monoColorSheep = AllSheep.Where((x) => (x.IsBlack == isBlack));
+
+        float alreadyKeptNormalised = 0;
+        int counter = 0;
+        foreach (var sheep in monoColorSheep)
+        {
+            if (alreadyKeptNormalised < normalisedKeptSheep)
+            {
+                counter++;
+                alreadyKeptNormalised = (float)counter / (float)monoColorSheep.Count();
+
+                //Debug.Log($"Sheep({counter},black:{isBlack})=> {alreadyKeptNormalised}");
+            }
+            else
+                DestroyImmediate(sheep.gameObject);// dont hate me
+        }
+
+        AllSheep = new List<Sheep>(AllSheep.Where((x) => x != null));
     }
 }
