@@ -9,6 +9,34 @@ public class CoffeMug : MonoBehaviour
     [SerializeField, Min(0.5f)] float scaleIncreaseFactor = 1.05f;
     private Vector3 spriteStartScale;
 
+    [SerializeField, Range(0f, 1f)] float removedWhiteSheep = 0.2f;
+    [SerializeField, Range(0f, 1f)] float removedBlackSheep = 1f;
+
+    public bool hasBeenUsed;
+
+
+    private static CoffeMug instance;
+    public static CoffeMug Instance
+    {
+        get
+        {
+            if (instance == null)
+                instance = FindObjectOfType<CoffeMug>();
+            return instance;
+        }
+    }
+
+
+    private void Awake()
+    {
+        instance = this;
+    }
+
+    private void OnDestroy()
+    {
+        if (instance == this) instance = null;
+    }
+
     // Start is called before the first frame update
     void Start()
     {
@@ -17,6 +45,8 @@ public class CoffeMug : MonoBehaviour
 
     private void OnMouseOver()
     {
+        if (hasBeenUsed) return;
+
         scaledSprite.transform.DOScale(spriteStartScale * scaleIncreaseFactor, 0.2f);
     }
 
@@ -27,13 +57,11 @@ public class CoffeMug : MonoBehaviour
 
     private void OnMouseDown()
     {
-        Debug.Log("Coffee break");
-        RoundManager.Instance.Pause();
-    }
+        if (hasBeenUsed) return;
 
-    private void OnMouseUp()
-    {
-        Debug.Log("Coffee break over");
-        RoundManager.Instance.Continue();
+        Debug.Log("Drink COFFEE!");
+        DreamBubble.Instance.RemoveSheep(1f - removedWhiteSheep, 1f - removedBlackSheep);
+
+        hasBeenUsed = true;
     }
 }
