@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class TaskListGenerator : MonoBehaviour
 {
+    string DataFilePath => Application.streamingAssetsPath + "/WorkTaskData.txt";
+
     [SerializeField] TextAsset workTaskData;
 
     public List<string> GenerateList(int listLength, int minTaskLength = 0, int maxTaskLength = int.MaxValue)
@@ -42,12 +44,20 @@ public class TaskListGenerator : MonoBehaviour
 
     private string[] GetAllTasks()
     {
-        string[] result = workTaskData.text.Split('\n');
+         
+      
+        string[] result = System.IO.File.ReadAllLines(DataFilePath);//workTaskData.text.Split('\n');
         for (int i = 0; i < result.Length; i++)
         {
             result[i] = result[i].Trim().Replace("  ", " ");
         }
 
         return result;
+
     }
+
+    //[ContextMenu("Sort")]
+    //private void Sort()
+    //{
+    //}
 }
