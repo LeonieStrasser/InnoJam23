@@ -7,8 +7,6 @@ public class TaskListGenerator : MonoBehaviour
 {
     string DataFolderPath => Application.streamingAssetsPath;
 
-    [SerializeField] TextAsset workTaskData;
-
     public List<string> GenerateList(int listLength, int minTaskLength = 0, int maxTaskLength = int.MaxValue)
     {
         List<string> rightLengthTasks = new List<string>();
