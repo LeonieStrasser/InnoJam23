@@ -83,25 +83,26 @@ public class RoundManager : MonoBehaviour
 
         TimerClock.StartTimer(secondsUntilDeathline + additionalSecondsUntilDeathline * round);
 
-        GameManager.Instance.Bubble.Reset(keptWhiteSheep, keptBlackSheep);
+        GameManager.Instance.Bubble.RemoveSheep(keptWhiteSheep, keptBlackSheep);
+        CoffeMug.Instance.hasBeenUsed = false;
         GameManager.Instance.StartRound();
     }
 
-    [ContextMenu("Continue")]
-    public void Continue()
-    {
-        TimerClock.Continue();
-        TaskInputReceiver.Instance.SetInputBlocked(false);
+    //[ContextMenu("Continue")]
+    //public void Continue()
+    //{
+    //    TimerClock.Continue();
+    //    TaskInputReceiver.Instance.SetInputBlocked(false);
 
-        Time.timeScale = 1;
-    }
+    //    Time.timeScale = 1;
+    //}
 
-    [ContextMenu("Pause")]
-    public void Pause()
-    {
-        TimerClock.Pause();
-        TaskInputReceiver.Instance.SetInputBlocked(true);
+    //[ContextMenu("Pause")]
+    //public void Pause()
+    //{
+    //    TimerClock.Pause();
+    //    TaskInputReceiver.Instance.SetInputBlocked(true);
 
-        Time.timeScale = 0;
-    }
+    //    Time.timeScale = 0;
+    //}
 }
