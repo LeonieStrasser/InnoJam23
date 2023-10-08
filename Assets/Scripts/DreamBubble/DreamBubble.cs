@@ -156,11 +156,11 @@ public class DreamBubble : MonoBehaviour
 
     private void CurbSheep(float normalisedKeptSheep, bool isBlack)
     {
-        IEnumerable<Sheep> monoColorSheep = AllSheep.Where((x) => (x.IsBlack == isBlack));
+        List<Sheep> monoColorSheep = new List<Sheep>(AllSheep.Where((x) => (x.IsBlack == isBlack)));
 
         float alreadyKeptNormalised = 0;
         int counter = 0;
-        foreach (var sheep in monoColorSheep)
+        for (int i = 0; i < monoColorSheep.Count(); i++)
         {
             if (alreadyKeptNormalised < normalisedKeptSheep)
             {
@@ -170,9 +170,12 @@ public class DreamBubble : MonoBehaviour
                 //Debug.Log($"Sheep({counter},black:{isBlack})=> {alreadyKeptNormalised}");
             }
             else
-                DestroyImmediate(sheep.gameObject);// dont hate me
+            {
+                monoColorSheep[i].isDying = true;
+                monoColorSheep[i].Remove();
+            }
         }
 
-        AllSheep = new List<Sheep>(AllSheep.Where((x) => x != null));
+        AllSheep = new List<Sheep>(AllSheep.Where((x) => !x.isDying));
     }
 }

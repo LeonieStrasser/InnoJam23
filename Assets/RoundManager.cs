@@ -84,7 +84,7 @@ public class RoundManager : MonoBehaviour
         TimerClock.StartTimer(secondsUntilDeathline + additionalSecondsUntilDeathline * round);
 
         GameManager.Instance.Bubble.RemoveSheep(keptWhiteSheep, keptBlackSheep);
-        CoffeMug.Instance.hasBeenUsed = false;
+        CoffeMug.Instance.ResetCoffee();
         GameManager.Instance.StartRound();
     }
 

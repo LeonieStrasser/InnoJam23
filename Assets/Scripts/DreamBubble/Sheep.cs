@@ -39,6 +39,8 @@ public class Sheep : MonoBehaviour
 
     public float Height => transform.localPosition.y;
 
+    public bool isDying;
+
     private void Start()
     {
         Bubble = transform.parent.GetComponent<DreamBubble>();
@@ -143,12 +145,12 @@ public class Sheep : MonoBehaviour
             return;
         }
 
-        Instantiate(sheepPuffVFX, transform.position, Quaternion.identity, null);
         Remove();
     }
 
-    private void Remove()
+    public void Remove()
     {
+        Instantiate(sheepPuffVFX, transform.position, Quaternion.identity, null);
         SheepSprite.transform.DOKill();
         Bubble.UpdateTiredness();
         Bubble.DestroySheep(this);

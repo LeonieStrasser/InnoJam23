@@ -139,6 +139,15 @@ MonoBehaviour:
     myPitch: 1
     minMaxPitch: {x: 0.86549705, y: 2.0409358}
     mySource: {fileID: 0}
+  - name: Drink
+    myClip: {fileID: 8300000, guid: 90bd677d2ad46e24785291987aad0be9, type: 3}
+    myVolume: 0.697
+    MyLoop: 0
+    playFromStart: 0
+    randomizePitch: 0
+    myPitch: 1
+    minMaxPitch: {x: 0.86549705, y: 2.0409358}
+    mySource: {fileID: 0}
   myTickNoise: {fileID: 0}
   myTypeSound: {fileID: 0}
   myTextEnter: {fileID: 0}
