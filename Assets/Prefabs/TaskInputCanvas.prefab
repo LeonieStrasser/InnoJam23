@@ -128,16 +128,16 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 934691367467768826}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalRotation: {x: -0.017499775, y: -0.21257196, z: 0.05862678, w: 0.97522813}
+  m_LocalPosition: {x: 0, y: 0, z: -147}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 757336202208535764}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: -0.528, y: -24.625, z: 6.996}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 1254, y: -235}
+  m_AnchoredPosition: {x: 980, y: -336}
   m_SizeDelta: {x: 569.1088, y: 302.2}
   m_Pivot: {x: 0, y: 1}
 --- !u!222 &1658487720449142106
@@ -252,6 +252,7 @@ GameObject:
   - component: {fileID: 90058081025426399}
   - component: {fileID: 2941147771875281053}
   - component: {fileID: 3482768120416540809}
+  - component: {fileID: 8820035658566170893}
   m_Layer: 5
   m_Name: WorkInput
   m_TagString: Untagged
@@ -266,16 +267,16 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8400505390762558013}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -1}
+  m_LocalRotation: {x: -0.02808049, y: 0.3152338, z: -0.084166296, w: 0.94485724}
+  m_LocalPosition: {x: 0, y: 0, z: 24}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 757336202208535764}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 36.901, z: -10.181}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 1426, y: 379}
+  m_AnchoredPosition: {x: 1393, y: 278}
   m_SizeDelta: {x: 446.3266, y: 327.5961}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &2941147771875281053
@@ -375,3 +376,16 @@ MonoBehaviour:
   m_hasFontAssetChanged: 0
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+--- !u!114 &8820035658566170893
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8400505390762558013}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 85e5d4c1b6cab2b4291c231dd16a4f45, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sortingOrder: 55

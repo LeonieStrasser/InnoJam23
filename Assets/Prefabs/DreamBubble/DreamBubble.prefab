@@ -72,7 +72,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 1
+  m_SortingOrder: 103
   m_Sprite: {fileID: 21300000, guid: c849fe252acd49f44b01419d127f55d2, type: 3}
   m_Color: {r: 0.754717, g: 0.754717, b: 0.754717, a: 1}
   m_FlipX: 0
@@ -133,12 +133,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   SheepPrefab: {fileID: 3577377807054872890, guid: ae6e4ee53b85e934b9dec1876577a4db, type: 3}
   SpawnPoint: {fileID: 7055586291057957794}
-  SheepSpawnInterval: {x: 0.5, y: 8}
-  SheepSpawnScale: {x: 0.8, y: 1.8}
-  SheepSpawnVelocity: {x: -5, y: -2}
-  BlackSheepProbability: 0.1
-  MaxSheepHeight: 1.2
-  FloorOffset: 2.4
+  SheepSpawnInterval: {x: 0.7, y: 5}
+  SheepSpawnScale: {x: 1.2, y: 1.5}
+  SheepSpawnVelocity: {x: -8, y: -2}
+  BlackSheepProbability: 0.2
+  MaxSheepHeight: 2
+  FloorOffset: 2
 --- !u!1 &5775424430801783635
 GameObject:
   m_ObjectHideFlags: 0
