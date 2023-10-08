@@ -1,9 +1,12 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.IO;
 using UnityEngine;
 
 public class TaskListGenerator : MonoBehaviour
 {
+    string DataFolderPath => Application.streamingAssetsPath;
+
     [SerializeField] TextAsset workTaskData;
 
     public List<string> GenerateList(int listLength, int minTaskLength = 0, int maxTaskLength = int.MaxValue)
@@ -42,7 +45,12 @@ public class TaskListGenerator : MonoBehaviour
 
     private string[] GetAllTasks()
     {
-        string[] result = workTaskData.text.Split('\n');
+        string[] files = Directory.GetFiles(DataFolderPath,"*.txt");
+
+        if (files.Length < 1) return new string[] {"Missing Files"};
+
+        string[] result = File.ReadAllLines(files[Random.Range(0, files.Length)]);
+        
         for (int i = 0; i < result.Length; i++)
         {
             result[i] = result[i].Trim().Replace("  ", " ");
@@ -50,4 +58,9 @@ public class TaskListGenerator : MonoBehaviour
 
         return result;
     }
+
+    //[ContextMenu("Sort")]
+    //private void Sort()
+    //{
+    //}
 }
