@@ -1,0 +1,100 @@
+Game Engine
+Asset
+Shader
+Collision Detection
+AI (Artificial Intelligence)
+Scripting
+Level Design
+Debugging
+Rendering
+Polygon
+Texture Mapping
+Frame Rate
+Physics Engine
+Game Loop
+Rigging
+Animation State
+Beta Testing
+Alpha Testing
+Compile
+Compile Time
+Compiler
+SDK (Software Development Kit)
+IDE (Integrated Development Environment)
+Scripting Language
+Bug
+Patch
+Version Control
+Multiplayer
+Single-player
+Server
+Client
+Networking
+Latency
+Rendering Pipeline
+Viewport
+Prefab
+Assets Pipeline
+Optimization
+Particle System
+Collision Response
+Game State
+Frame Buffer
+Rasterization
+Vertex
+Fragment Shader
+Mesh
+Skeleton
+Baking
+Keyframe
+Mipmap
+Normal Map
+Specular Map
+Ambient Occlusion
+Bump Mapping
+Ray Tracing
+Pathfinding
+Behavior Tree
+State Machine
+Game Design Document (GDD)
+Asset Pipeline
+Modding (Modification)
+Game Balance
+Gameplay Mechanics
+Player Input
+HUD (Heads-Up Display)
+UI/UX Design
+Game Testing
+Localization
+Microtransactions
+Monetization
+In-App Purchases (IAP)
+Analytics
+VR (Virtual Reality)
+AR (Augmented Reality)
+Mobile Gaming
+PC Gaming
+Console Gaming
+Platformer
+First-Person Shooter (FPS)
+Role-Playing Game (RPG)
+Massively Multiplayer Online (MMO)
+Simulation Game
+Puzzle Game
+Casual Game
+Indie Game
+Freemium Game
+DLC (Downloadable Content)
+Early Access
+Gamification
+Influencer Marketing (in the context of games)
+Live Ops
+User Acquisition
+Retention
+Monetization Strategy
+Game Analytics
+Game Community Management
+Player Engagement
+Game Metrics
+Loot Box
+Game Economy
