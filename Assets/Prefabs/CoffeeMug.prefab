@@ -202,7 +202,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   scaledSprite: {fileID: 8664641533261773675}
   scaleIncreaseFactor: 1.2
-  removedWhiteSheep: 0.5
+  removedWhiteSheep: 0
   removedBlackSheep: 1
   hasBeenUsed: 0
   myFeedback: {fileID: 4094777924458764158}
