@@ -10,13 +10,13 @@ public class Sheep : MonoBehaviour
 {
     [SerializeField] private SpriteRenderer SheepSprite;
     [SerializeField] private Sprite SheepBlack;
-    
+
     [SerializeField] private float ClickHoldDuration;
-    
+
     [SerializeField] private float BlackSheepScaleUpFactor;
     [SerializeField] private float BlackSheepScaleUpDuration;
     [SerializeField] private float BlackSheepBigDuration;
-    
+
     [SerializeField] private GameObject sheepPuffVFX;
     [SerializeField] private GameObject sheepBlackPuffVFX;
 
@@ -24,13 +24,15 @@ public class Sheep : MonoBehaviour
 
     private Vector3 SpriteStartScale;
 
-    private bool IsBlack;
+    public bool IsBlack { get; private set; }
 
     private bool ImmuneToMouse;
 
     private bool ClickHoldActive;
 
     private float CurrentClickHoldTimer;
+
+    public float Height => transform.localPosition.y;
 
     private void Start()
     {
@@ -62,7 +64,7 @@ public class Sheep : MonoBehaviour
     {
         if (ImmuneToMouse)
             return;
-        
+
         SheepSprite.transform.DOScale(SpriteStartScale * 1.2f, 0.2f);
     }
 
@@ -70,9 +72,9 @@ public class Sheep : MonoBehaviour
     {
         if (ImmuneToMouse)
             return;
-        
+
         ResetClickHold();
-        
+
         SheepSprite.transform.DOScale(SpriteStartScale, 0.2f);
     }
 
@@ -89,7 +91,7 @@ public class Sheep : MonoBehaviour
     private void OnMouseUp()
     {
         SheepSprite.transform.DOKill();
-        
+
         ResetClickHold();
     }
 
@@ -98,14 +100,14 @@ public class Sheep : MonoBehaviour
         ImmuneToMouse = true;
 
         transform.position -= new Vector3(0, 0, 0.15f);
-        
+
         SheepSprite.transform.DOKill();
         SheepSprite.transform.DOScale(SpriteStartScale * BlackSheepScaleUpFactor, BlackSheepScaleUpDuration);
 
         yield return new WaitForSeconds(BlackSheepScaleUpDuration + BlackSheepBigDuration);
-        
+
         Instantiate(sheepBlackPuffVFX, transform.position, Quaternion.identity, null);
-        
+
         Remove();
     }
 
@@ -132,7 +134,7 @@ public class Sheep : MonoBehaviour
             StartCoroutine(BlackSheepScaleUp());
             return;
         }
-        
+
         Instantiate(sheepPuffVFX, transform.position, Quaternion.identity, null);
         Remove();
     }

@@ -14,7 +14,7 @@ public class NeonRohr : MonoBehaviour
     {
         // Lerp den "AlertState" von seinem aktuellen Wert zum Zielwert (1.0) über die Zeit.
         currentAlertState = Mathf.Lerp(0, 1.0f, RoundManager.Instance.NormalisedPassedTime);
-        Debug.Log(currentAlertState);
+        //Debug.Log(currentAlertState);
 
         // Setzen Sie den neuen Wert des "AlertState" im Material.
         foreach (var item in sprites)
