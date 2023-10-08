@@ -109,7 +109,9 @@ public class DreamBubble : MonoBehaviour
     }
 
     [Button]
-    public void Reset(float normalisedKeptWhiteSheep, float normalisedKeptBlackSheep)
+    public void RemoveSheep() => RemoveSheep(0, 0);
+
+    public void RemoveSheep(float normalisedKeptWhiteSheep, float normalisedKeptBlackSheep)
     {
         CurbSheep(normalisedKeptWhiteSheep, isBlack: false);
         CurbSheep(normalisedKeptBlackSheep, isBlack: true);
