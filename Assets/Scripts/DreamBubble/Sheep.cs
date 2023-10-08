@@ -5,32 +5,39 @@ using UnityEngine;
 using DG.Tweening;
 using Unity.VisualScripting;
 using UnityEditor;
+using NaughtyAttributes;
 
 public class Sheep : MonoBehaviour
 {
     [SerializeField] private SpriteRenderer SheepSprite;
     [SerializeField] private Sprite SheepBlack;
-    
+
     [SerializeField] private float ClickHoldDuration;
-    
+
     [SerializeField] private float BlackSheepScaleUpFactor;
     [SerializeField] private float BlackSheepScaleUpDuration;
     [SerializeField] private float BlackSheepBigDuration;
-    
+
     [SerializeField] private GameObject sheepPuffVFX;
     [SerializeField] private GameObject sheepBlackPuffVFX;
+
+    float meehTimer = 0;
+    float randomNextMeehTime = 0;
+    [MinMaxSlider(0, 60)] public Vector2 meehRandomizeValue;
 
     private DreamBubble Bubble;
 
     private Vector3 SpriteStartScale;
 
-    private bool IsBlack;
+    public bool IsBlack { get; private set; }
 
     private bool ImmuneToMouse;
 
     private bool ClickHoldActive;
 
     private float CurrentClickHoldTimer;
+
+    public float Height => transform.localPosition.y;
 
     private void Start()
     {
@@ -40,6 +47,8 @@ public class Sheep : MonoBehaviour
 
     private void Update()
     {
+        UpdateRandomMeehTimer();
+
         if (!ClickHoldActive)
             return;
 
@@ -50,6 +59,7 @@ public class Sheep : MonoBehaviour
             OnClickedLongEnough();
             ResetClickHold();
         }
+
     }
 
     private void OnCollisionEnter2D(Collision2D other)
@@ -62,7 +72,7 @@ public class Sheep : MonoBehaviour
     {
         if (ImmuneToMouse)
             return;
-        
+
         SheepSprite.transform.DOScale(SpriteStartScale * 1.2f, 0.2f);
     }
 
@@ -70,9 +80,9 @@ public class Sheep : MonoBehaviour
     {
         if (ImmuneToMouse)
             return;
-        
+
         ResetClickHold();
-        
+
         SheepSprite.transform.DOScale(SpriteStartScale, 0.2f);
     }
 
@@ -89,7 +99,7 @@ public class Sheep : MonoBehaviour
     private void OnMouseUp()
     {
         SheepSprite.transform.DOKill();
-        
+
         ResetClickHold();
     }
 
@@ -98,14 +108,14 @@ public class Sheep : MonoBehaviour
         ImmuneToMouse = true;
 
         transform.position -= new Vector3(0, 0, 0.15f);
-        
+
         SheepSprite.transform.DOKill();
         SheepSprite.transform.DOScale(SpriteStartScale * BlackSheepScaleUpFactor, BlackSheepScaleUpDuration);
 
         yield return new WaitForSeconds(BlackSheepScaleUpDuration + BlackSheepBigDuration);
-        
+
         Instantiate(sheepBlackPuffVFX, transform.position, Quaternion.identity, null);
-        
+
         Remove();
     }
 
@@ -132,7 +142,7 @@ public class Sheep : MonoBehaviour
             StartCoroutine(BlackSheepScaleUp());
             return;
         }
-        
+
         Instantiate(sheepPuffVFX, transform.position, Quaternion.identity, null);
         Remove();
     }
@@ -142,5 +152,19 @@ public class Sheep : MonoBehaviour
         SheepSprite.transform.DOKill();
         Bubble.UpdateTiredness();
         Bubble.DestroySheep(this);
+    }
+
+
+
+    void UpdateRandomMeehTimer()
+    {
+        meehTimer += Time.deltaTime;
+        if (meehTimer > randomNextMeehTime)
+        {
+            meehTimer = 0;
+            AudioManager.instance.PlayStackable("SheepBackground"); // M‰‰‰h!!!!
+            randomNextMeehTime = UnityEngine.Random.Range(meehRandomizeValue.x, meehRandomizeValue.y);
+
+        }
     }
 }
