@@ -1,10 +1,11 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.IO;
 using UnityEngine;
 
 public class TaskListGenerator : MonoBehaviour
 {
-    string DataFilePath => Application.streamingAssetsPath + "/WorkTaskData.txt";
+    string DataFolderPath => Application.streamingAssetsPath;
 
     [SerializeField] TextAsset workTaskData;
 
@@ -44,16 +45,18 @@ public class TaskListGenerator : MonoBehaviour
 
     private string[] GetAllTasks()
     {
-         
-      
-        string[] result = System.IO.File.ReadAllLines(DataFilePath);//workTaskData.text.Split('\n');
+        string[] files = Directory.GetFiles(DataFolderPath,"*.txt");
+
+        if (files.Length < 1) return new string[] {"Missing Files"};
+
+        string[] result = File.ReadAllLines(files[Random.Range(0, files.Length)]);
+        
         for (int i = 0; i < result.Length; i++)
         {
             result[i] = result[i].Trim().Replace("  ", " ");
         }
 
         return result;
-
     }
 
     //[ContextMenu("Sort")]
