@@ -19,6 +19,7 @@ public class CoffeeFeedback : MonoBehaviour
         }
 
         Instantiate(DespawnFX, transform.position, Quaternion.identity, null);
+        AudioManager.instance.Play("Drink");
     }
 
     [Button]

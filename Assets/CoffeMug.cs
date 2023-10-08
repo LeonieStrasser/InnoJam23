@@ -13,6 +13,7 @@ public class CoffeMug : MonoBehaviour
     [SerializeField, Range(0f, 1f)] float removedBlackSheep = 1f;
 
     public bool hasBeenUsed;
+    [SerializeField] private CoffeeFeedback myFeedback;
 
 
     private static CoffeMug instance;
@@ -30,6 +31,7 @@ public class CoffeMug : MonoBehaviour
     private void Awake()
     {
         instance = this;
+        
     }
 
     private void OnDestroy()
@@ -63,5 +65,12 @@ public class CoffeMug : MonoBehaviour
         DreamBubble.Instance.RemoveSheep(1f - removedWhiteSheep, 1f - removedBlackSheep);
 
         hasBeenUsed = true;
+        myFeedback.DrinkCoffee();
+    }
+
+    public void ResetCoffee()
+    {
+        hasBeenUsed = false;
+        myFeedback.ResetCoffee();
     }
 }

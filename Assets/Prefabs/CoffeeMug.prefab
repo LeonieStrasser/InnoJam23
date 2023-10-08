@@ -202,6 +202,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   scaledSprite: {fileID: 8664641533261773675}
   scaleIncreaseFactor: 1.2
+  removedWhiteSheep: 0.2
+  removedBlackSheep: 1
+  hasBeenUsed: 0
+  myFeedback: {fileID: 4094777924458764158}
 --- !u!50 &1556322102726325664
 Rigidbody2D:
   serializedVersion: 4
