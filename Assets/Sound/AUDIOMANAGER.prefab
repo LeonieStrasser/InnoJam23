@@ -130,6 +130,15 @@ MonoBehaviour:
     myPitch: 1
     minMaxPitch: {x: 0.7, y: 1.2}
     mySource: {fileID: 0}
+  - name: SheepBackground
+    myClip: {fileID: 8300000, guid: 7263179f747335a41b99d444e2ca94b1, type: 3}
+    myVolume: 0.141
+    MyLoop: 0
+    playFromStart: 0
+    randomizePitch: 1
+    myPitch: 1
+    minMaxPitch: {x: 0.86549705, y: 2.0409358}
+    mySource: {fileID: 0}
   myTickNoise: {fileID: 0}
   myTypeSound: {fileID: 0}
   myTextEnter: {fileID: 0}

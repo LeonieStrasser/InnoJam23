@@ -17,6 +17,9 @@ public class RoundManager : MonoBehaviour
     [SerializeField, Min(0)] int additionalMaxTaskLengthPerRound = 1;
     [Space]
     [SerializeField] int additionalSecondsUntilDeathline = 0;
+    [Space]
+    [SerializeField, Range(0f, 1f)] float keptWhiteSheep = 0.25f;
+    [SerializeField, Range(0f, 1f)] float keptBlackSheep = 0.9f;
 
     [Header("Testing")]
     [SerializeField, Min(0)] int playerRoundAtStart = 0;
@@ -80,6 +83,7 @@ public class RoundManager : MonoBehaviour
 
         TimerClock.StartTimer(secondsUntilDeathline + additionalSecondsUntilDeathline * round);
 
+        GameManager.Instance.Bubble.Reset(keptWhiteSheep, keptBlackSheep);
         GameManager.Instance.StartRound();
     }
 
