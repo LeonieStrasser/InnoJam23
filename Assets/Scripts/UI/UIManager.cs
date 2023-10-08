@@ -33,6 +33,8 @@ public class UIManager : MonoBehaviour
 
     public void ShowUI(UIType _type)
     {
+        TaskInputReceiver.Instance.SetInputBlocked(true);
+
         CurrentUIType = _type;
         
         if(CurrentActiveUI)
@@ -70,8 +72,10 @@ public class UIManager : MonoBehaviour
     {
         CurrentActiveUI.SetActive(false);
         ScreenBackround.SetActive(false);
+
+        TaskInputReceiver.Instance.SetInputBlocked(false);
     }
-    
+
     public void StartButtonHit()
     {
         RoundManagement.StartFirstRound();

@@ -257,7 +257,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 4021205143005036754}
         m_TargetAssemblyTypeName: UIManager, Assembly-CSharp
-        m_MethodName: RestartButtonHit
+        m_MethodName: NextRoundButtonHit
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
