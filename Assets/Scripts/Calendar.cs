@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using NaughtyAttributes;
@@ -66,7 +67,9 @@ public class Calendar : MonoBehaviour
     {
         RemoveCheckmarks();
 
-        for (int i = firstDayOffset; i < _daysFinished + firstDayOffset; i++)
+        int limit = Math.Min(_daysFinished + firstDayOffset, CheckmarkPositions.Count);
+
+        for (int i = firstDayOffset; i < limit; i++)
         {
             InstantiatedCheckmarks.Add(Instantiate(CheckmarkPrefab, CheckmarkPositions[i].position, Quaternion.identity, CheckmarkPositions[i]));
         }
