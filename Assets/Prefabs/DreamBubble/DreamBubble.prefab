@@ -25,7 +25,7 @@ Transform:
   m_GameObject: {fileID: 2899289314826044389}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.48, y: 1.2, z: 0}
+  m_LocalPosition: {x: -2.49, y: 0.06, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -56,7 +56,7 @@ Transform:
   m_GameObject: {fileID: 2927688404383213581}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1.3, y: -4.19, z: 0}
+  m_LocalPosition: {x: -2.94, y: -5.3, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -88,7 +88,7 @@ Transform:
   m_GameObject: {fileID: 3060885955482685545}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: 0.07465811, w: 0.9972092}
-  m_LocalPosition: {x: 5.156469, y: -0.21515, z: 0}
+  m_LocalPosition: {x: 3.17, y: -1.39, z: 0}
   m_LocalScale: {x: 0.6630156, y: 0.5932407, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -197,9 +197,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   SheepPrefab: {fileID: 3577377807054872890, guid: ae6e4ee53b85e934b9dec1876577a4db, type: 3}
   SpawnPoint: {fileID: 7055586291057957794}
-  SheepSpawnInterval: {x: 0.9, y: 5}
-  SheepSpawnScale: {x: 1.5, y: 2}
-  SheepSpawnVelocity: {x: -5, y: -1}
+  SheepSpawnInterval: {x: 0.7, y: 5}
+  SheepSpawnScale: {x: 1.2, y: 1.5}
+  SheepSpawnVelocity: {x: -8, y: -1}
   BlackSheepProbability: 0.2
   MaxHeightMarker: {fileID: 8331607522710896351}
   FloorHeightMarker: {fileID: 3097512865801728270}
@@ -229,7 +229,7 @@ Transform:
   m_GameObject: {fileID: 5775424430801783635}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: 0.07465811, w: 0.9972092}
-  m_LocalPosition: {x: -2.58, y: -2.27, z: -0.007997699}
+  m_LocalPosition: {x: -4.61, y: -3.48, z: -0.007997699}
   m_LocalScale: {x: 1.105026, y: 0.98873436, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -360,7 +360,7 @@ Transform:
   m_GameObject: {fileID: 6208930116302503090}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.56, y: 0.93, z: 0}
+  m_LocalPosition: {x: -0.07, y: -0.18, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
