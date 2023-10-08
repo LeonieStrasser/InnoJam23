@@ -113,6 +113,8 @@ public class DreamBubble : MonoBehaviour
         AllSheep.Clear();
 
         Tiredness = 0;
+
+        OnTirednessChanged?.Invoke(Tiredness);
     }
 
     public void UpdateTiredness()
