@@ -10,7 +10,7 @@ Game Engine
 Asset
 Shader
 Collision Detection
-AI (Artificial Intelligence)
+AI
 Scripting
 Level Design
 Debugging
@@ -27,8 +27,8 @@ Alpha Testing
 Compile
 Compile Time
 Compiler
-SDK (Software Development Kit)
-IDE (Integrated Development Environment)
+SDK
+IDE
 Scripting Language
 Bug
 Patch
@@ -66,7 +66,7 @@ Behavior Tree
 State Machine
 Game Design Document (GDD)
 Asset Pipeline
-Modding (Modification)
+Modding
 Game Balance
 Gameplay Mechanics
 Player Input
@@ -95,7 +95,7 @@ Freemium Game
 DLC (Downloadable Content)
 Early Access
 Gamification
-Influencer Marketing (in the context of games)
+Influencer Marketing
 Live Ops
 User Acquisition
 Retention

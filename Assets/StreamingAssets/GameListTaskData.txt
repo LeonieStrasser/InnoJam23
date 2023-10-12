@@ -24,7 +24,7 @@ Limbo
 Don't Starve
 Hollow Knight: Silksong
 The Legend of Zelda: Breath of the Wild
-Cyberpunk 2077
+Cyberpunk
 Assassin's Creed Valhalla
 Halo Infinite
 Resident Evil Village
@@ -45,6 +45,6 @@ Animal Crossing: New Horizons
 Final Fantasy VII Remake
 Doom Eternal
 Spider-Man: Miles Morales
-God of War (2018)
+God of War
 The Last of Us Part II
 Death Stranding
